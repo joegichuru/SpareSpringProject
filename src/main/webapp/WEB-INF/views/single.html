@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title th:text="${title}"></title>
+    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
+    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
+    <script th:src="@{/resources/semantic/app.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
+    <!--development only--->
+    <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
+</head>
+<body>
+<div th:replace="~{header::header}"></div>
+<div class="ui container">
+    <div class="ui two column stackable grid main">
+        <div class="six wide column  computer tablet only">
+            <div class="ui segment">Map Goes here</div>
+        </div>
+        <div class="ten wide column">
+            <div class="ui segment">
+                <div class="ui fluid raised card">
+                    <div class="image">
+                        <img th:src="@{/resources/images/blog-2.jpg}"/>
+                    </div>
+                    <div class="content">
+                        <a class="header">Modern residence</a>
+                        <div class="meta">
+                            <div class="left floated">
+                                <span class="date left floated"><i class="icon clock"></i> 5 mins ago</span>
+                                <span class="right floated"><i class="icon location marker"></i>Near you </span>
+                            </div>
+                            <div class="right floated">
+                                <span><i class="icon eye"></i> 20 views</span>
+                                <span><i class="icon star"></i> 145 likes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <div class="ui three column grid">
+                        <div class="column">
+                            <div class="ui segment">
+                                <div class="ui teal tag label">
+                                    <i class="icon bed"></i>2 bedrooms
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui segment">
+                                <div class="ui teal tag label">
+                                    <i class="icon bath"></i>2 bathroom
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui segment">
+                                <div class="ui teal tag label">
+                                    <i class="icon crop"></i> 200 sqrft
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui fluid raised card">
+                    <div class="content">
+                        <div class="header">Description</div>
+                        <div class="description">
+                            <p>Descrpiton about the item.</p>
+                            <p>Can be as long as 250 characters</p>
+                        </div>
+                        <div class="extra content">
+                            <div class="right floated author">
+                                <img class="ui avatar image" th:src="@{/resources/images/prof.jpg}">Author name
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui fluid raised card">
+                    <div class="content">
+                        <div class="header">Amenities</div>
+                        <div class="description">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

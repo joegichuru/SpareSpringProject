@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Spare :: Add Item</title>
+    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
+    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
+    <script th:src="@{/resources/semantic/app.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
+    <!--development only-->
+    <link rel="stylesheet" type="text/css" href="../../resources/semantic/dist/semantic.min.css"/>
+</head>
+<body>
+<div th:replace="~{header::header}"></div>
+<div class="ui container">
+    <div class="ui stackable two column grid main">
+        <div class="six wide column  computer tablet only">
+            <div class="ui segment">Map Goes here</div>
+        </div>
+        <div class="ten wide column">
+            <div class="ui segment">
+                <form class="ui large form" th:object="${item}" method="post" th:action="@{/add}">
+                    <div class="fields">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class=" teal map signs icon"></i>
+                                <input type="text" name="title"
+                                       placeholder="Title" th:field="*{name}">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="icon teal dollar"></i>
+                                <input type="number" name="price"
+                                       placeholder="Price in Ksh." th:field="*{price}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <textarea class="ui fluid" placeholder="Description" th:field="*{description}"></textarea>
+                    </div>
+                    <div class="field">
+                      <div class="ui left icon input">
+                          <i class="icon location arrow teal"></i>
+                          <input type="text" name="address" placeholder="Drag map to generate location"/>
+                      </div>
+                    </div>
+                    <div class="fields">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="icon teal bed"></i>
+                                <input type="number" placeholder="Number of Bedrooms" name="bedroom" th:field="*{noOfBedrooms}">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="icon teal bath"></i>
+                                <input type="number" placeholder="Number of bathrooms" name="bathroom" th:field="*{noOfBathrooms}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="category" th:field="*{category}">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Category</div>
+                            <div class="menu">
+                                <div class="item" data-value="sell">For Rent</div>
+                                <div class="item" data-value="rent">For Sell</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+                        <label class="ui label teal">Amenities</label>
+                    </div>
+                    <div class="ui relaxed horizontal list">
+                        <div class="item">
+                            <div class="ui teal checkbox">
+                                <input type="checkbox" name="garage">
+                                <label>Garage</label>
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="swimmingpool" th:field="*{hasSwimmingPool}">
+                                <label>Swimming pool</label>
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="garden">
+                                <label>Garden</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui  checkbox">
+                                <input type="checkbox" name="security">
+                                <label>Security System</label>
+                            </div>
+                            <div class="ui  checkbox">
+                                <input type="checkbox" name="balcony">
+                                <label>Balcony</label>
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="playground">
+                                <label>Play Ground</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui  checkbox">
+                                <input type="checkbox" name="fireplace">
+                                <label>Fire Place</label>
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="gated">
+                                <label>Gated community</label>
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="parking">
+                                <label>Parking Space</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                 <button class="ui button fluid teal" type="submit">Add Property</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

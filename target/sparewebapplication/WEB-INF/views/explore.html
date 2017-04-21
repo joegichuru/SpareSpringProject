@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Spare |explore</title>
+    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
+    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
+    <script th:src="@{/resources/semantic/app.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
+</head>
+<body>
+<div th:replace="~{header::header}"></div>
+<div class="ui container">
+    <div class="ui grid main">
+        <div class="ui inline cookie nag">
+            <span class="title">
+                We use cookies to ensure you get the best experience on our site.
+            </span>
+            <i class="close icon"></i>
+        </div>
+        <div class="row">
+            <div class="column">
+                <button class="ui button circular icon right floated">
+                    <i class="icon options"></i>
+                </button>
+                <div id="filter">
+                    <form class="ui form">
+                        <div class="three fields hidden">
+                            <div class="field">
+                                <div class="ui search selection dropdown">
+                                    <input type="hidden" name="city">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">City</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="nairobi">Nairobi</div>
+                                        <div class="item" data-value="mombasa">Mombasa</div>
+                                        <div class="item" data-value="kisumu">Kisumu</div>
+                                        <div class="item" data-value="nakuru">Nakuru</div>
+                                        <div class="item" data-value="eldoret">Eldoret</div>
+                                        <div class="item" data-value="thika">Thika</div>
+                                        <div class="item" data-value="ruiru">Ruiru</div>
+                                        <div class="item" data-value="machakos">Machakos</div>
+                                        <div class="item" data-value="naivasha">Naivasha</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="price">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Price</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="price-high">High to low</div>
+                                        <div class="item" data-value="price-low">Low to high</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="views">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Views</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="most">High to low</div>
+                                        <div class="item" data-value="least">Low to high</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="ui four stackable teal link cards">
+            <div class="card raised">
+                <div class="ui fluid image">
+                    <div class="ui teal ribbon label">
+                       FOR SELL
+                    </div>
+                    <img th:src="@{/resources/images/bg-3.jpg}">
+                </div>
+
+                <div class="content">
+                    <div class="header">Item title</div>
+                    <div class="meta">
+                        <a>Agent name</a>
+                    </div>
+                    <div class="description">
+                        Westlands phase two
+                    </div>
+                </div>
+                <div class="extra content">
+      <span class="right floated">
+        <i class="icon clock"></i> just now
+      </span>
+                    <span>
+        <i class="icon eye"></i>
+        75 views
+      </span>
+                </div>
+            </div>
+            <div class="card raised">
+                <div class="ui image fluid">
+                    <div class="ui teal ribbon label">
+                        FOR SELL
+                    </div>
+                    <img th:src="@{/resources/images/bg-5.jpg}" >
+                </div>
+                <div class="content">
+                    <div class="header">Item title</div>
+                    <div class="meta">
+                        <a>Agent name</a>
+                    </div>
+                    <div class="description">
+                        Item description
+                    </div>
+                </div>
+                <div class="extra content">
+      <span class="right floated">
+        <i class="icon clock"></i> 20 minutes ago
+      </span>
+                    <span>
+        <i class="eye icon"></i>
+        35 views
+      </span>
+                </div>
+            </div>
+            <div class="card raised">
+                <div class="ui image fluid">
+                    <div class="ui teal ribbon label">
+                        FOR SELL
+                    </div>
+                    <img th:src="@{/resources/images/blog-4.jpg}">
+                </div>
+                <div class="content">
+                    <div class="header">Item title</div>
+                    <div class="meta">
+                        <a>Agent name</a>
+                    </div>
+                    <div class="description">
+                        More description about the item.Should be around 160 characters at most
+                    </div>
+                </div>
+                <div class="extra content">
+      <span class="right floated small">
+          <i class="icon clock"></i>just now
+      </span>
+                    <span>
+        <i class="icon eye"></i>
+        151 views
+      </span>
+                </div>
+            </div>
+            <div class="card raised">
+                <div class="ui image fluid">
+                    <div class="ui teal ribbon label">
+                        FOR SELL
+                    </div>
+                    <img th:src="@{/resources/images/bg-3.jpg}"/>
+                </div>
+                <div class="content">
+                    <div class="header">Item title</div>
+                    <div class="meta">
+                        <a>Agent name</a>
+                    </div>
+                    <div class="description">
+                        More description about the item.Should be around 160 characters at most
+                    </div>
+                </div>
+                <div class="extra content">
+      <span class="right floated small">
+          <i class="icon clock"></i>just now
+      </span>
+                    <span>
+        <i class="icon eye"></i>
+        151 views
+      </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="ui celled table" th:if="${items}">
+      <thead>
+      <tr>
+          <th>Name</th>
+          <th>Id</th>
+          <th>Date Posted</th>
+      </tr>
+      </thead>
+        <tbody>
+        <tr th:each="item:${items}">
+            <td th:text="${item.getName()}"></td>
+            <td th:text="${item.getId()}"></td>
+            <td th:text="${item.getTimePosted()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

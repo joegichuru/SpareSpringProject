@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spare::Error</title>
+    <link rel="stylesheet" th:href="@{/resources/semantic/dist/semantic.min.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/semantic/app.css}"/>
+    <script type="text/javascript" th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
+    <!--development only-->
+    <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
+</head>
+<body>
+
+<div class="ui grid page main">
+    <div class="row">
+        <div class="column padding-reset">
+            <div class="ui large message">
+                <h1>Account Error!</h1>
+                <p>It appears the email address you are trying to use is already registered with another account</p>
+
+                <div class="ui segment">
+                    <div class="ui label teal left pointing right floated">
+                        <a th:href="@{/signup}">Try again with different email</a>
+                    </div>
+                    <div class="ui label teal  right pointing left floated">
+                        <a th:href="@{/passwordrecover}">Forgotten Password?Recover</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
