@@ -9,9 +9,37 @@
     <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
     <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
     <script th:src="@{/resources/semantic/app.js}"></script>
+    <script th:src="@{/resources/semantic/uploadItem.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
+    <script th:src="@{/resources/semantic/filepreview.js}"></script>
     <!--development only-->
     <link rel="stylesheet" type="text/css" href="../../resources/semantic/dist/semantic.min.css"/>
+    <style>
+        #image-preview {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: #ffffff;
+            color: #2185d0;
+            border-radius: 45%;
+        }
+        #image-preview>input[type="file"]{
+
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.uploadPreview({
+                input_field:"#image-upload",
+                preview_box:"#image-preview",
+                label_field:"#image_label",
+                label_default:"Choose File",
+                label_selected:"Change File",
+                no_label:false
+            });
+        });
+    </script>
 </head>
 <body>
 <div th:replace="~{header::header}"></div>
@@ -22,12 +50,12 @@
         </div>
         <div class="ten wide column">
             <div class="ui segment">
-                <form class="ui large form" th:object="${item}" method="post" th:action="@{/add}">
+                <form class="ui large form" th:object="${item}" method="post" th:action="@{/add}" enctype="multipart/form-data">
                     <div class="fields">
                         <div class="field">
                             <div class="ui left icon input">
                                 <i class=" teal map signs icon"></i>
-                                <input type="text" name="title"
+                                <input type="text" name="iname"
                                        placeholder="Title" th:field="*{name}">
                             </div>
                         </div>
@@ -40,7 +68,7 @@
                         </div>
                     </div>
                     <div class="field">
-                        <textarea class="ui fluid" placeholder="Description" th:field="*{description}"></textarea>
+                        <textarea class="ui fluid" placeholder="Description" th:field="*{description}" name="description"></textarea>
                     </div>
                     <div class="field">
                       <div class="ui left icon input">
@@ -68,11 +96,19 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Category</div>
                             <div class="menu">
-                                <div class="item" data-value="sell">For Rent</div>
-                                <div class="item" data-value="rent">For Sell</div>
+                                <div class="item" data-value="sell">For Sell</div>
+                                <div class="item" data-value="rent">For Rent</div>
                             </div>
                         </div>
 
+                    </div>
+                    <div class="field">
+                        <div id="image-preview">
+                            <label for="image-upload" id="image-label" class="ui teal label circular large">
+                                <i class="icon upload"></i>Image
+                            </label>
+                            <input type="file" name="item-image" id="image-upload" style="display: none" required/>
+                        </div>
                     </div>
 
                     <div class="field">
@@ -81,7 +117,7 @@
                     <div class="ui relaxed horizontal list">
                         <div class="item">
                             <div class="ui teal checkbox">
-                                <input type="checkbox" name="garage">
+                                <input type="checkbox" name="garage" th:field="*{hasGarage}">
                                 <label>Garage</label>
                             </div>
                             <div class="ui checkbox">
@@ -89,48 +125,46 @@
                                 <label>Swimming pool</label>
                             </div>
                             <div class="ui checkbox">
-                                <input type="checkbox" name="garden">
+                                <input type="checkbox" name="garden" th:field="*{hasGarden}">
                                 <label>Garden</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui  checkbox">
-                                <input type="checkbox" name="security">
+                                <input type="checkbox" name="security" th:field="*{hasSecurity}">
                                 <label>Security System</label>
                             </div>
                             <div class="ui  checkbox">
-                                <input type="checkbox" name="balcony">
+                                <input type="checkbox" name="balcony" th:field="*{hasBalcony}">
                                 <label>Balcony</label>
                             </div>
                             <div class="ui checkbox">
-                                <input type="checkbox" name="playground">
+                                <input type="checkbox" name="playground" th:field="*{hasPlayGround}">
                                 <label>Play Ground</label>
                             </div>
                         </div>
                         <div class="item">
                             <div class="ui  checkbox">
-                                <input type="checkbox" name="fireplace">
+                                <input type="checkbox" name="fireplace" th:field="*{hasFirePlace}">
                                 <label>Fire Place</label>
                             </div>
                             <div class="ui checkbox">
-                                <input type="checkbox" name="gated">
+                                <input type="checkbox" name="gated" th:field="*{hasGatedCommunity}">
                                 <label>Gated community</label>
                             </div>
                             <div class="ui checkbox">
-                                <input type="checkbox" name="parking">
+                                <input type="checkbox" name="parking" th:field="*{hasParking}">
                                 <label>Parking Space</label>
                             </div>
                         </div>
 
                     </div>
-
-
-
-
                  <button class="ui button fluid teal" type="submit">Add Property</button>
+                    <div class="ui error message"></div>
                 </form>
 
             </div>
+
         </div>
     </div>
 </div>

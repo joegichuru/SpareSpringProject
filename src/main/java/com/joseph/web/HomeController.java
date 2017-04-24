@@ -63,15 +63,14 @@ public class HomeController {
     @RequestMapping(method = RequestMethod.GET,path = "/explore")
     public String handleExplore(Model model){
         itemList=itemService.findAll() ;
-        if(session.getAttribute("account")==null){
-            return "redirect:signin";
-        }else {
-            if(itemList.size()>0){
-                model.addAttribute("items",itemList);
-            }
-            return "explore";
+        if(itemList.size()>0) {
+            model.addAttribute("items", itemList);
         }
+        if(session.getAttribute("account")==null){
+            session.setAttribute("logged",false);
+        }else {
+            session.setAttribute("logged",true);
+        }
+        return "explore";
     }
-
-
 }

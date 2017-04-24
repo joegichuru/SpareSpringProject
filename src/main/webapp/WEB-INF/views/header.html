@@ -7,7 +7,6 @@
         <div class="computer tablet only row">
             <div class="ui inverted fixed menu navbar  grid">
                 <a href="#" class="brand item">SpareKE</a>
-
                 <div class="right compact menu">
                     <a class="item" th:href="@{/}">
                         <i class="icon dashcube"></i>
@@ -21,33 +20,32 @@
                     <a class="item" th:href="@{/exlporemap}">
                         <i class="icon location marker"></i>
                     </a>
-                    <a class="item" th:href="@{/statistics}">
+                    <a class="item" th:href="@{/statistics}" th:if="${session.logged}">
                         <i class="icon pie chart"></i>
                     </a>
-
-                    <a href="#" class="item">
-                        <i class="icon mail"></i>
-                        <div class="floating ui teal small label circular">5</div>
-                    </a>
-                    <a href="#" class="item">
-                        <i class="icon bell"></i>
-                        <div class="floating ui teal small label circular">10</div>
-                    </a>
-                    <a class="ui item account">
-                        <div class="ui dropdown">
-                            <img th:src="@{${session.account.encodedImage()}}" class="ui avatar image"/>
-                            <span th:text="${session.account.getFname()+' '+session.account.getLname()}"></span>
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                               <a th:href="@{/signout}" class="item">
-                                   <i class="icon lock"></i>Sign Out
-                               </a>
-                                <a th:href="@{/account}" class="item">
-                                    <i class="icon configure"></i>Edit Account
-                                </a>
+                    <a href="#" class="item" th:if="${session.logged}">
+                            <i class="icon mail"></i>
+                            <div class="floating ui teal small label circular">5</div>
+                        </a>
+                    <a href="#" class="item" th:if="${session.logged}">
+                            <i class="icon bell"></i>
+                            <div class="floating ui teal small label circular">10</div>
+                        </a>
+                    <a class="ui item account" th:if="${session.logged}">
+                            <div class="ui dropdown">
+                                <img th:src="@{${session.account.encodedImage()}}" class="ui avatar image"/>
+                                <span th:text="${session.account.getFname()+' '+session.account.getLname()}"></span>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a th:href="@{/signout}" class="item">
+                                        <i class="icon lock"></i>Sign Out
+                                    </a>
+                                    <a th:href="@{/account}" class="item">
+                                        <i class="icon configure"></i>Edit Account
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                 </div>
 
             </div>
@@ -57,15 +55,15 @@
             <div class="ui fixed inverted navbar menu">
                 <a href="#" class="brand item">SpareKE</a>
                 <div class="right menu open">
-                    <a th:href="@{/messages}" class="item">
+                    <a th:href="@{/messages}" class="item" th:if="${session.logged}">
                         <i class="icon mail"></i>
                         <div class="floating ui teal small label circular">5</div>
                     </a>
-                    <a th:href="@{/notification}" class="item">
+                    <a th:href="@{/notification}" class="item" th:if="${session.logged}">
                         <i class="icon bell"></i>
                         <div class="floating ui teal small label circular">10</div>
                     </a>
-                    <a class="ui item account">
+                    <a class="ui item account" th:if="${session.logged}">
                         <div class="ui dropdown">
                             <img th:src="@{${session.account.encodedImage()}}" class="ui avatar image"/>
                             <!--<span th:text="${session.account.getFname()+' '+session.account.getLname()}"></span>-->
@@ -105,7 +103,7 @@
             <i class="location arrow icon teal"></i>
             Explore Map
         </a>
-        <a class="item" th:href="@{/statistics}">
+        <a class="item" th:href="@{/statistics}" th:if="${session.logged}">
             <i class="icon pie chart teal"></i>
             Statistics
         </a>
