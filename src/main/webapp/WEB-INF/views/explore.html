@@ -80,11 +80,13 @@
         </div>
         <div class="ui three stackable teal link cards">
             <div class="card raised" th:each="item:${items}">
-                <div class="ui fluid image">
+                <div class="ui image medium">
                     <div class="ui teal ribbon label">
                        <span th:text="${item.getCategory().toUpperCase()}"></span>
                     </div>
-                    <img th:src="@{/resources/images/bg-3.jpg}">
+                    <a th:href="@{/explore/{itemId}(itemId=${item.getId()})}">
+                        <img th:src="${item.encodedImage()}">
+                    </a>
                 </div>
 
                 <div class="content">
@@ -94,7 +96,6 @@
                     </div>
                     <div class="description">
                         <p th:text="${item.getDescription()}" class="text small"></p>
-
                     </div>
                 </div>
                 <div class="extra content">
@@ -107,102 +108,8 @@
       </span>
                 </div>
             </div>
-            <!--<div class="card raised">-->
-                <!--<div class="ui image fluid">-->
-                    <!--<div class="ui teal ribbon label">-->
-                        <!--FOR SELL-->
-                    <!--</div>-->
-                    <!--<img th:src="@{/resources/images/bg-5.jpg}" >-->
-                <!--</div>-->
-                <!--<div class="content">-->
-                    <!--<div class="header">Item title</div>-->
-                    <!--<div class="meta">-->
-                        <!--<a>Agent name</a>-->
-                    <!--</div>-->
-                    <!--<div class="description">-->
-                        <!--Item description-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="extra content">-->
-      <!--<span class="right floated">-->
-        <!--<i class="icon clock"></i> 20 minutes ago-->
-      <!--</span>-->
-                    <!--<span>-->
-        <!--<i class="eye icon"></i>-->
-        <!--35 views-->
-      <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="card raised">-->
-                <!--<div class="ui image fluid">-->
-                    <!--<div class="ui teal ribbon label">-->
-                        <!--FOR SELL-->
-                    <!--</div>-->
-                    <!--<img th:src="@{/resources/images/blog-4.jpg}">-->
-                <!--</div>-->
-                <!--<div class="content">-->
-                    <!--<div class="header">Item title</div>-->
-                    <!--<div class="meta">-->
-                        <!--<a>Agent name</a>-->
-                    <!--</div>-->
-                    <!--<div class="description">-->
-                        <!--More description about the item.Should be around 160 characters at most-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="extra content">-->
-      <!--<span class="right floated small">-->
-          <!--<i class="icon clock"></i>just now-->
-      <!--</span>-->
-                    <!--<span>-->
-        <!--<i class="icon eye"></i>-->
-        <!--151 views-->
-      <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="card raised">-->
-                <!--<div class="ui image fluid">-->
-                    <!--<div class="ui teal ribbon label">-->
-                        <!--FOR SELL-->
-                    <!--</div>-->
-                    <!--<img th:src="@{/resources/images/bg-3.jpg}"/>-->
-                <!--</div>-->
-                <!--<div class="content">-->
-                    <!--<div class="header">Item title</div>-->
-                    <!--<div class="meta">-->
-                        <!--<a>Agent name</a>-->
-                    <!--</div>-->
-                    <!--<div class="description">-->
-                        <!--More description about the item.Should be around 160 characters at most-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="extra content">-->
-      <!--<span class="right floated small">-->
-          <!--<i class="icon clock"></i>just now-->
-      <!--</span>-->
-                    <!--<span>-->
-        <!--<i class="icon eye"></i>-->
-        <!--151 views-->
-      <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
         </div>
     </div>
-    <table class="ui celled table" th:if="${items}">
-      <thead>
-      <tr>
-          <th>Name</th>
-          <th>Id</th>
-          <th>Date Posted</th>
-      </tr>
-      </thead>
-        <tbody>
-        <tr th:each="item:${items}">
-            <td th:text="${item.getName()}"></td>
-            <td th:text="${item.getId()}"></td>
-            <td th:text="${item.getTimePosted()}"></td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 </body>
 </html>

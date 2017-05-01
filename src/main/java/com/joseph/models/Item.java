@@ -4,11 +4,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import sun.util.calendar.BaseCalendar;
 
+import javax.imageio.ImageIO;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Set;
@@ -260,6 +267,30 @@ public class Item extends BaseModel{
             }else {
                 return "on "+getTimePosted().toString();
             }
+        }
+    }
+    //encode the image to base64 so you can use the string to generate an image in html :-)
+    public String encodedImage(){
+        return "data:image/png;base64,"+ Base64.getEncoder().encodeToString(getDescriptiveImage());
+    }
+    //image croping algorithm
+    public void cropImage(byte[] original){
+        InputStream inputStream=new ByteArrayInputStream(original);
+        try {
+            BufferedImage originalImage= ImageIO.read(inputStream);
+            int height=originalImage.getHeight();
+            int width=originalImage.getWidth();
+            //scale all images to be 2880 *1620
+            if((height>1400&&height<1700)&&(width>2600&&width<3000)){
+                //do nothing perfect size
+            }else {
+                //crop or expand
+                //crop
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

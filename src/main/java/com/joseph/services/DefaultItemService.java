@@ -48,6 +48,6 @@ public class DefaultItemService implements ItemService {
 
     @Override
     public List<Item> findAll() {
-        return sessionFactory.getCurrentSession().createQuery("FROM Item i order by i.timePosted").getResultList();
+        return sessionFactory.getCurrentSession().createQuery("FROM Item i order by i.timePosted desc ").getResultList();
     }
 }
