@@ -24,14 +24,18 @@
             <div class="ui segment">
                 <div class="ui fluid raised card">
                     <div class="image">
-                        <img th:src="@{/resources/images/blog-2.jpg}"/>
+                        <img th:src="@{${item.encodedImage()}}"/>
                     </div>
                     <div class="content">
-                        <a class="header">Modern residence</a>
+                        <a class="header" th:text="${item.getName().toUpperCase()}">Modern residence</a>
                         <div class="meta">
                             <div class="left floated">
-                                <span class="date left floated"><i class="icon clock"></i> 5 mins ago</span>
-                                <span class="right floated"><i class="icon location marker"></i>Near you </span>
+                                <i class="icon clock"></i>
+                                <span class="date left floated" th:text="${item.timeConverter()}">5 mins ago</span>
+                                <span class="right floated">
+                                    <i class="icon location marker"></i>
+                                    <!--<span th:text="${item.getLocation().getCity()}"></span>-->
+                                    Near you </span>
                             </div>
                             <div class="right floated">
                                 <span><i class="icon eye"></i> 20 views</span>
@@ -41,18 +45,21 @@
                     </div>
                 </div>
                 <div class="ui segment">
-                    <div class="ui three column grid">
+                    <div  class="ui three column grid computer only">
                         <div class="column">
                             <div class="ui segment">
                                 <div class="ui teal tag label">
-                                    <i class="icon bed"></i>2 bedrooms
+                                    <i class="icon bed"></i>
+                                    <span th:text="${item.getNoOfBedrooms()}">2 </span>Bedrooms
+
                                 </div>
                             </div>
                         </div>
                         <div class="column">
                             <div class="ui segment">
                                 <div class="ui teal tag label">
-                                    <i class="icon bath"></i>2 bathroom
+                                    <i class="icon bath"></i>
+                                    <span th:text="${item.getNoOfBathrooms()}">2 </span>Bathrooms
                                 </div>
                             </div>
                         </div>
@@ -64,17 +71,47 @@
                             </div>
                         </div>
                     </div>
+                    <div class="ui three column grid tablet mobile only">
+                        <div class="column">
+                            <div class="ui segment">
+                                <a class="ui label teal circular">
+                                    <span th:text="${item.getNoOfBedrooms()}">2</span>
+                                </a>
+                                Bedroom(s)
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui segment">
+                                <a class="ui label green circular">
+                                    <span th:text="${item.getNoOfBathrooms()}">2</span>
+                                </a>
+                                Bathroom(s)
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui segment">
+                                <a class="ui label pink circular">
+                                    <span>2</span>
+                                </a>
+                                Area in sqft
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="ui fluid raised card">
                     <div class="content">
                         <div class="header">Description</div>
                         <div class="description">
-                            <p>Descrpiton about the item.</p>
-                            <p>Can be as long as 250 characters</p>
+                            <span th:text="${item.getDescription()}">
+                                <p>Descrpiton about the item.</p>
+                                <p>Can be as long as 250 characters</p>
+                            </span>
+
                         </div>
                         <div class="extra content">
                             <div class="right floated author">
-                                <img class="ui avatar image" th:src="@{/resources/images/prof.jpg}">Author name
+                                <img class="ui avatar image" th:src="${item.getAccount().encodedImage()}">Author name
                             </div>
                         </div>
                     </div>
