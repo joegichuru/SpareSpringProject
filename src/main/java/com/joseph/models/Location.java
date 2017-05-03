@@ -1,6 +1,11 @@
 package com.joseph.models;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by joseph on 4/23/17.
@@ -9,24 +14,57 @@ import javax.persistence.Entity;
 @Entity
 public class Location extends BaseModel {
     //To do set location to somewhere in nairobi just incase the user doesn't enter
-    private String latitude;
-    private String longitude;
+    private double latitude;
+    private double longitude;
     private String city;
-    private String street;
+    @Transient
+    private final  Map<String,Double[]> cities=new HashMap<>();
 
-    public String getLatitude() {
+    public Location() {
+    }
+    public Location(String location){
+        //initialise cities;
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        cities.put("Nairobi",new Double[]{0.0,0.0});
+        String[] templocation=location.split(" ");
+        //set location from extracted strings
+        double tempLat=Double.parseDouble(templocation[1]);
+        double tempLong=Double.parseDouble(templocation[3]);
+        if(tempLat!=0){
+            this.latitude=tempLat;
+        }
+        if(tempLong!=0){
+            this.longitude=tempLong;
+        }
+        String city=genarateCity(latitude,longitude);
+    }
+    @Transient
+    private String genarateCity(double latitude, double longitude) {
+        String currentCity="Unknown";
+        for(Double[] city:cities.values()){
+            
+        }
+        return null;
+    }
+
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
@@ -38,11 +76,4 @@ public class Location extends BaseModel {
         this.city = city;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
 }

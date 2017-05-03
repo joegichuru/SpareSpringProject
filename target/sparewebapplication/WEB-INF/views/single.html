@@ -27,7 +27,9 @@
     <div class="ui two column stackable grid main">
         <div class="six wide column  computer tablet only">
             <div class="ui segment" id="map">
-
+                <div class="ui active dimmer">
+                    <div class="ui text loader">Fetching map....</div>
+                </div>
                 <script>
                     var map;
                     function initMap(){
@@ -70,26 +72,26 @@
                     <div  class="ui three column grid computer only">
                         <div class="column">
                             <div class="ui segment">
-                                <div class="ui teal tag label">
-                                    <i class="icon bed"></i>
-                                    <span th:text="${item.getNoOfBedrooms()}">2 </span>Bedrooms
-
-                                </div>
+                                <a class="ui label teal circular">
+                                    <span th:text="${item.getNoOfBedrooms()}">2</span>
+                                </a>
+                                Bedroom(s)
                             </div>
                         </div>
                         <div class="column">
                             <div class="ui segment">
-                                <div class="ui teal tag label">
-                                    <i class="icon bath"></i>
-                                    <span th:text="${item.getNoOfBathrooms()}">2 </span>Bathrooms
-                                </div>
+                                <a class="ui label green circular">
+                                    <span th:text="${item.getNoOfBathrooms()}">2</span>
+                                </a>
+                                Bathroom(s)
                             </div>
                         </div>
                         <div class="column">
                             <div class="ui segment">
-                                <div class="ui teal tag label">
-                                    <i class="icon crop"></i> 200 sqrft
-                                </div>
+                                <a class="ui label olive circular">
+                                    <span>2</span>
+                                </a>
+                                Area in sqft
                             </div>
                         </div>
                     </div>
@@ -112,7 +114,7 @@
                         </div>
                         <div class="column">
                             <div class="ui segment">
-                                <a class="ui label pink circular">
+                                <a class="ui label olive circular">
                                     <span>2</span>
                                 </a>
                                 Area in sqft
@@ -126,8 +128,8 @@
                         <div class="header">Description</div>
                         <div class="description">
                             <span th:text="${item.getDescription()}">
-                                <p>Descrpiton about the item.</p>
-                                <p>Can be as long as 250 characters</p>
+                                Descrpiton about the item.
+                                Can be as long as 250 characters
                             </span>
 
                         </div>

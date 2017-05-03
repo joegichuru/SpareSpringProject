@@ -25,13 +25,25 @@ import java.util.List;
 @RequestMapping("/")
 public class HomeController {
     private List<Item> itemList;
-    private List<String> products=new ArrayList<>();
-    @Autowired
     private ItemService itemService;
-    @Autowired
+
     private HttpSession session;
+    @Autowired
+    public void setSession(HttpSession session) {
+        this.session = session;
+    }
+    @Autowired
+    public void setItemService(ItemService itemService) {
+        this.itemService = itemService;
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public String handleHomePage(Model model){
+        if(session.getAttribute("account")!=null){
+            session.setAttribute("logged",false);
+        }else {
+            session.setAttribute("logged",true);
+        }
         return "landing";
     }
     @RequestMapping(method = RequestMethod.GET,path = "/navigation")
