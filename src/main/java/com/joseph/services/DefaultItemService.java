@@ -50,4 +50,32 @@ public class DefaultItemService implements ItemService {
     public List<Item> findAll() {
         return sessionFactory.getCurrentSession().createQuery("FROM Item i order by i.timePosted desc ").getResultList();
     }
+
+    @Override
+    public List<Item> findByCity(String city) {
+        return sessionFactory.getCurrentSession()
+                .createQuery("FROM Item i WHERE i.location.city=:city").setParameter("city",city).getResultList();
+    }
+
+    @Override
+    public List<Item> sortByPriceHigh() {
+        return sessionFactory.getCurrentSession()
+                .createQuery("FROM Item i ORDER BY i.price DESC").getResultList();
+    }
+
+    @Override
+    public List<Item> sortByPriceLowToHigh() {
+        return sessionFactory.getCurrentSession()
+                .createQuery("FROM Item i ORDER BY i.price ASC ").getResultList();
+    }
+
+    @Override
+    public List<Item> sortByViewsLowToHigh() {
+        return null;
+    }
+
+    @Override
+    public List<Item> sortByViewsHighToLow() {
+        return null;
+    }
 }

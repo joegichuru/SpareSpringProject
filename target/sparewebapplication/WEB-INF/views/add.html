@@ -14,6 +14,8 @@
     <script th:src="@{/resources/semantic/filepreview.js}"></script>
     <!--development only-->
     <link rel="stylesheet" type="text/css" href="../../resources/semantic/dist/semantic.min.css"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"
+            async defer></script>
     <style>
         #image-preview {
             width: 100px;
@@ -25,6 +27,9 @@
         }
         #image-preview>input[type="file"]{
 
+        }
+        #map{
+            height: 300px;
         }
 
     </style>
@@ -46,7 +51,36 @@
 <div class="ui container">
     <div class="ui stackable two column grid main">
         <div class="six wide column  computer tablet only">
-            <div class="ui segment">Map Goes here</div>
+            <div class="map-holder">
+                <div id="map">
+                    <div class="ui active dimmer">
+                        <div class="ui text loader">Loading Map...</div>
+                    </div>
+                </div>
+
+                <script>
+                    var map;
+                    var myMarker;
+                    var pos={lat:-1.2921,lng:36.8219};
+                    var markerIcon="https://codificar.com.br/wp-content/themes/codificar/images/icons/map-marker.png";
+                    function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: -1.2921, lng: 36.8219},//load nairobi by default
+                            zoom: 15
+                        });
+                        myMarker=new google.maps.Marker({
+                            position:pos,
+                            map:map,
+//                            label:{text:'Drag Me',color:'yellow'},
+                            icon:markerIcon,
+                            draggable:true
+                        });
+                        google.maps.event.addListener(myMarker, 'dragend', function(evt){
+                            document.getElementById('address').value
+                                ="latitude:"+evt.latLng.lat().toFixed(3)+" "+"longitude:"+evt.latLng.lng().toFixed(3)});
+                    }
+                </script>
+            </div>
         </div>
         <div class="ten wide column">
             <div class="ui segment">
@@ -72,8 +106,8 @@
                     </div>
                     <div class="field">
                       <div class="ui left icon input">
-                          <i class="icon location arrow teal"></i>
-                          <input type="text" name="address" placeholder="Drag map to generate location"/>
+                          <i class="icon location marker red"></i>
+                          <input type="text" disabled name="address" placeholder="Drag map marker to generate location" id="address"/>
                       </div>
                     </div>
                     <div class="fields">

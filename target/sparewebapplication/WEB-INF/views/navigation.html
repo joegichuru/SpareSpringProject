@@ -9,6 +9,8 @@
     <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
     <script th:src="@{/resources/semantic/app.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/explore.css}"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/semantic/dist/semantic.min.css"/>
 </head>
 <body>
 <div class="ui grid">
@@ -136,16 +138,40 @@
 
 
     </div>
+    <div class="row">
+        <div class="items-container">
+            <a href="#" class="item-card">
+                <div class="figure">
+                    <img th:src="@{/resources/images/bg-6.jpg}" alt="image">
+                    <div class="figCaption">
+                        <div>$1,930,000</div>
+                        <span class="icon-eye"> 145</span>
+                        <span class="icon-heart"> 99</span>
+                        <span class="icon-bubble"> 25</span>
+                    </div>
+                    <div class="figView"><span class="icon-eye"></span></div>
+                    <div class="figType">For Sale</div>
+                </div>
+                <h2>House With a Lovely Glass-Roofed Pergola</h2>
+                <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
+                <div class="cardRating">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star-o"></span>
+                    (170)
+                </div>
+                <ul class="cardFeat">
+                    <li><span class="fa fa-moon-o"></span> 3</li>
+                    <li><span class="icon-drop"></span> 2</li>
+                    <li><span class="icon-frame"></span> 2800 Sq Ft</li>
+                </ul>
+                <div class="clearfix"></div>
+            </a>
+        </div>
+
+    </div>
 </div>
 </body>
-</html><form>
-               <label>Image Gallery</label>
-               <input type="file" class="file"
-                      multiple data-show-upload="false"
-                      data-show-caption="false"
-                      data-show-remove="false"
-                      accept="image/jpeg,image/png"
-                      data-browse-class="btn btn-o btn-default"
-                      data-browse-label="Browse Images">
-               <p class="help-block">You can select multiple images at once</p>
-           </form>
+</html>

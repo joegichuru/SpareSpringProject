@@ -12,18 +12,40 @@
     <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
     <!--development only--->
     <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
+    <script type="text/javascript" th:src="@{/resources/semantic/maps.js}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"
+            async defer></script>
+    <style>
+        #map {
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
 <div th:replace="~{header::header}"></div>
 <div class="ui container">
     <div class="ui two column stackable grid main">
         <div class="six wide column  computer tablet only">
-            <div class="ui segment">Map Goes here</div>
+            <div class="ui segment" id="map">
+
+                <script>
+                    var map;
+                    function initMap(){
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: -1.2921, lng: 36.8219},//load nairobi for now replace with addres
+                            //of item from model
+                            zoom: 15
+                        });
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"
+                        async defer></script>
+            </div>
         </div>
         <div class="ten wide column">
             <div class="ui segment">
                 <div class="ui fluid raised card">
-                    <div class="image">
+                    <div class="image medium" style="max-height: 400px;">
                         <img th:src="@{${item.encodedImage()}}"/>
                     </div>
                     <div class="content">
@@ -104,8 +126,8 @@
                         <div class="header">Description</div>
                         <div class="description">
                             <span th:text="${item.getDescription()}">
-                                <p>Descrpiton about the item.</p>
-                                <p>Can be as long as 250 characters</p>
+                                Descrpiton about the item.
+                                Can be as long as 250 characters
                             </span>
 
                         </div>

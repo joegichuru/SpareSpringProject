@@ -6,8 +6,10 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -37,32 +39,19 @@ public class HomeController {
         Calendar calendar=Calendar.getInstance();
         model.addAttribute("date",calendar.getTime());
         model.addAttribute("name","joseph");
-        products.add("Stationary");
-        products.add("Furniture");
-        products.add("Boxes");
-        products.add("More");
-        products.add("Stationary");
-        products.add("Furniture");
-        products.add("Boxes");
-        products.add("More");
-        products.add("Stationary");
-        products.add("Furniture");
-        products.add("Boxes");
-        products.add("More");
-        products.add("Stationary");
-        products.add("Furniture");
-        products.add("Boxes");
-        products.add("More");
-        products.add("Stationary");
-        products.add("Furniture");
-        products.add("Boxes");
-        products.add("More");
-        model.addAttribute("products",products);
         return "navigation";
     }
     @RequestMapping(method = RequestMethod.GET,path = "/explore")
-    public String handleExplore(Model model){
+    public String handleExplore(Model model,
+                                @RequestAttribute(value = "city",required = false)String city,
+                                @RequestAttribute(value = "price",required = false)String price,
+                                @RequestAttribute(value = "views",required = false)String views){
+
         itemList=itemService.findAll() ;
+//        if(city!=null){
+//           itemList=itemService.findByCity(city);
+//           //return a fragment by AJAX to update the UI to reflect the current changes :-)
+//        }
         if(itemList.size()>0) {
             model.addAttribute("items", itemList);
         }

@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+    .ui.grid.items-container{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+.item-card{
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.figure{
+    background-color: #000;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.figure img{
+    position: relative;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    vertical-align: middle;
+    border: 0;
+}
+
+.figCaptions .meta{
+    padding-top: 10px;
+    font-size: 1em;
+    color: rgba(0,0,0,.4);
+}
+.figCaptions .header{
+    font-weight: 700;
+    font-size: 1.28571429em;
+    margin-top: -.21425em;
+    line-height: 1.28571429em;
+    color: rgba(0,0,0,.85);
+}
+.figCaptions .right-floated{
+    float: right;
+}
+.figCaptions .left-floated{
+    float: left;
+}

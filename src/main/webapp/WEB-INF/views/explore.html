@@ -10,18 +10,22 @@
     <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
     <script th:src="@{/resources/semantic/app.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/explore.css}"/>
     <!---developement only-->
     <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
+    <link rel="stylesheet" href="../../resources/semantic/explore.css"/>
 </head>
 <body>
 <div th:replace="~{header::header}"></div>
 <div class="ui container">
     <div class="ui grid main">
-        <div class="ui inline cookie nag">
+        <div class="row">
+            <div class="ui inline cookie nag">
             <span class="title">
                 We use cookies to ensure you get the best experience on our site.
             </span>
-            <i class="close icon"></i>
+                <i class="close icon"></i>
+            </div>
         </div>
         <div class="row">
             <div class="column">
@@ -78,24 +82,118 @@
 
             </div>
         </div>
+
+        <!--<div class="row">-->
+            <!--<div class="ui items">-->
+                <!--<div class="item">-->
+                    <!--<div class="image">-->
+                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
+                    <!--</div>-->
+                    <!--<div class="content">-->
+                        <!--<a class="header">Header</a>-->
+                        <!--<div class="meta">-->
+                            <!--<span>Description</span>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="extra">-->
+                            <!--Additional Details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                    <!--<div class="image">-->
+                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
+                    <!--</div>-->
+                    <!--<div class="content">-->
+                        <!--<a class="header">Header</a>-->
+                        <!--<div class="meta">-->
+                            <!--<span>Description</span>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="extra">-->
+                            <!--Additional Details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                    <!--<div class="image">-->
+                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
+                    <!--</div>-->
+                    <!--<div class="content">-->
+                        <!--<a class="header">Header</a>-->
+                        <!--<div class="meta">-->
+                            <!--<span>Description</span>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="extra">-->
+                            <!--Additional Details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                    <!--<div class="image">-->
+                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
+                    <!--</div>-->
+                    <!--<div class="content">-->
+                        <!--<a class="header">Header</a>-->
+                        <!--<div class="meta">-->
+                            <!--<span>Description</span>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="extra">-->
+                            <!--Additional Details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                    <!--<div class="image">-->
+                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
+                    <!--</div>-->
+                    <!--<div class="content">-->
+                        <!--<a class="header">Header</a>-->
+                        <!--<div class="meta">-->
+                            <!--<span>Description</span>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="extra">-->
+                            <!--Additional Details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
         <div class="ui three stackable teal link cards">
             <div class="card raised" th:each="item:${items}">
-                <div class="ui image fluid">
+                <div class="ui image">
                     <div class="ui teal ribbon label">
                        <span th:text="${item.getCategory().toUpperCase()}"></span>
                     </div>
                     <a th:href="@{/explore/{itemId}(itemId=${item.getId()})}">
-                        <img th:src="${item.encodedImage()}">
+                        <img th:src="${item.encodedImage()}"
+                             style="height: 240px;min-height: 200px;max-height: 260px;min-width: 100%;">
                     </a>
                 </div>
+                <!--<img class="image" th:src="${item.encodedImage()}" />-->
 
-                <div class="content">
+                <div class="content" style="min-height: 0;max-height: 100px;">
                     <div class="header"><span th:text="${item.getName()}"></span>  </div>
                     <div class="meta">
                         <a><span th:text="${item.getAccount().getFname()+' '+ item.getAccount().getLname()}"></span> </a>
                     </div>
+                    <div class="meta right floated">Location</div>
                     <div class="description">
-                        <p th:text="${item.getDescription()}" class="text small"></p>
+                        <p th:text="${item.getDescription().substring(0,40)+'...'}" class="text small"></p>
                     </div>
                 </div>
                 <div class="extra content">
@@ -109,6 +207,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
 </body>
