@@ -15,8 +15,8 @@ public interface ItemService {
     Item findItem(long itemId);
     List<Item> findAll();
     List<Item> findByCity(String city);
-    List<Item> sortByPriceHigh();
-    List<Item> sortByPriceLowToHigh();
-    List<Item> sortByViewsLowToHigh();
-    List<Item> sortByViewsHighToLow();
+
+    List<Item> findByPrice(int high, int low);
+
+    List<Item> findByCategory(String category);
 }

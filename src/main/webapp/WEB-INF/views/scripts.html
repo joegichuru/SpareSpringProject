@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div th:fragment="scripts">
+    <script th:src="@{/resources/materialize/js/jquery-2.1.1.min.js}"></script>
+    <!--<script th:src="@{/resources/materialize/js/jquery.validate.js}"></script>-->
+    <script th:src="@{/resources/materialize/js/materialize.js}"></script>
+    <script th:src="@{/resources/materialize/js/init.js}"></script>
+    <script th:src="@{/resources/materialize/js/app.js}"></script>
+    <script th:src="@{/resources/materialize/js/jquery.barrating.min.js}"></script>
+    <script th:src="@{/resources/materialize/noUiSlider/nouislider.js}"></script>
+    <!--prism -->
+    <script type="text/javascript" th:src="@{/resources/materialize/js/plugins/prism/prism.js}"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" th:src="@{/resources/materialize/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js}"></script>
+    <!-- chartist -->
+    <script type="text/javascript" th:src="@{/resources/materialize/js/plugins/chartist-js/chartist.min.js}"></script>
+    <!--nestable -->
+    <link th:href="@{/resources/materialize/js/plugins/jquery.nestable/nestable.css}" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+</div>
+
+</body>
+</html>

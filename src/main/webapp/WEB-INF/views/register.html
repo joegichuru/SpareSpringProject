@@ -5,137 +5,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>register</title>
-    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
-    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
-    <script th:src="@{/resources/semantic/register.js}"></script>
-    <script th:src="@{/resources/semantic/filepreview.js}"></script>
-    <!---developement only-->
-    <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
-    <style>
-        body {
-            background-color: #DADADA;
-        }
-        body > .grid {
-            height: 100%;
-        }
-        .column {
-            max-width: 600px;
-        }
-        #image-preview {
-            width: 100px;
-            height: 100px;
-            position: relative;
-            background-color: #ffffff;
-            color: #2185d0;
-            border-radius: 45%;
-        }
-        #image-preview>input[type="file"]{
-
-        }
-
-    </style>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $.uploadPreview({
-                input_field:"#image-upload",
-                preview_box:"#image-preview",
-                label_field:"#image_label",
-                label_default:"Choose File",
-                label_selected:"Change File",
-                no_label:false
-            });
-        });
-    </script>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/materialize/css/materialize.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/materialize/css/material-icons.css}"/>
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/resources/materialize/css/centre-page.css}"/>-->
+    <!--dev-->
+    <link rel="stylesheet" type="text/css" href="../../resources/materialize/css/materialize.min.css"/>
+<script>
+    $(document).ready(function(){
+        $('#sign-up').validate({
+            rules:{
+                fname:{
+                    required:true,
+                    minlength:2
+                },
+                lname:{
+                    required:true,
+                    minlength:2
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                password:{
+                    required:true,
+                    minlength:8
+                },
+                password2:{
+                    required:true,
+                    minlength:8,
+                    equalTo:'#password'
+                },
+                gender:{
+                    required:true
+                }
+            },
+            messages:{
+                fname:{
+                    required:'First Name Required!',
+                    minlength:'First name must be at least 2 characters!'
+                },
+                lname:{
+                    required:'Last Name Required!',
+                    minlength:'Last name must be at least 2 characters!'
+                },
+                email:{
+                    required:'Email Required!',
+                    email:'Invalid email address!'
+                },
+                password:{
+                    required:'Password Required!',
+                    minlength:'First name must be at least 8 characters!'
+                },
+                password2:{
+                    required:'Password Required!',
+                    minlength:'First name must be at least 8 characters!'
+                },
+                gender:{
+                    required:'Specify Gender'
+                }
+            },errorElement:'div',
+            errorPlacement:function (error, element) {
+                var placement=$(element).data('error');
+                if(placement){
+                    $(placement).append(error)
+                }else {
+                    error.insertAfter(element);
+                }
+            }
+        });    });
+</script>
 </head>
-<body>
-<div class="ui middle aligned center aligned grid">
-    <div class="column">
-        <h2 class="ui teal image header">
-            <i class="icon home teal"></i>
-            <div class="content">
-                Register
+<body class="teal">
+<div class="row">
+    <div class="col s12 m8 l6 offset-l3 offset-m2">
+        <div class="card-panel">
+            <div class="row">
+                <div class="col s12 m12 l12 center-align">
+                    <i class="material-icons medium circle white-text teal">home</i>
+                </div>
+                <div class="col s12 m12 l12 center-align">
+                    <h5 class="subheader">Welcome to SpareKE</h5>
+                </div>
             </div>
-        </h2>
-        <form class="ui large form" th:action="@{/signup}" enctype="multipart/form-data"
-              method="post" th:object="${userForm}" id="registerForm">
-            <div class="ui stacked segment">
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="icon user"></i>
-                            <input name="fname" type="text" placeholder="First Name" th:field="*{fname}" />
-                        </div>
-
+            <form th:object="${userForm}" th:action="@{/signup}" method="post" id="sign-up" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="input-field col s12 l6 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input  type="text" class="validate" id="fname" required th:field="*{fname}" name="fname">
+                        <label for="fname" data-error="Name not valid">First Name:</label>
                     </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input name="lname" type="text" placeholder="Last Name" th:field="*{lname}"/>
-                        </div>
-
+                    <div class="input-field col s12 l6 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input  type="text" class="validate" id="lname" required th:field="*{lname}" name="lname">
+                        <label for="lname" data-error="Name not valid">Last Name:</label>
                     </div>
                 </div>
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="icon mail"></i>
-                            <input name="email" type="email" placeholder="Email address" th:field="*{email}"/>
-                        </div>
-
+                <div class="row">
+                    <div class="input-field col s12 l6 m6">
+                        <i class="material-icons prefix">mail</i>
+                        <input  type="email" class="validate" id="email" required th:field="*{email}" name="email">
+                        <label for="email" data-error="Email not valid!">Email Address:</label>
                     </div>
-                   <div class="field">
-                       <div class="ui selection dropdown">
-                           <input type="hidden" name="gender" th:field="*{gender}">
-                           <i class="dropdown icon"></i>
-                           <div class="default text">Gender</div>
-                           <div class="menu">
-                               <div class="item" data-value="male">
-                                   <i class="icon male"></i>
-                                   Male</div>
-                               <div class="item" data-value="female">
-                                   <i class="icon female"></i>Female </div>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="icon lock"></i>
-                            <input type="password" placeholder="password" name="password" th:field="*{password}"/>
-                        </div>
-
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="icon lock"></i>
-                            <input type="password" placeholder="confirm password" name="password2"/>
-                        </div>
+                    <div class="input-field col s12 l6 m6">
+                        <i class="prefix material-icons">group</i>
+                        <select name="gender" required="required">
+                            <option value="" disabled selected>Gender</option>
+                            <option value="male">Male
+                            </option>
+                            <option value="female">
+                                Female
+                            </option>
+                        </select>
                     </div>
                 </div>
-                <div class="field">
-                    <div id="image-preview">
-                        <label for="image-upload" id="image-label" class="ui teal label circular large">
-                            <i class="icon upload"></i>Profile
-                        </label>
-                        <input type="file" name="profile" id="image-upload" style="display: none" required/>
+                <div class="row">
+                    <div class="input-field col s12 l6 m6">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" id="password" required th:field="*{password}" class="validate" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" id="password2" required class="validate" name="password2">
+                        <label for="password2" data-error="Passwords do not match!">Confirm Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="file-field input-field s12 l10 m10">
+                        <div class="btn-floating">
+                            <span>
+                                <i class="material-icons">photo_filter</i>
+                            </span>
+                            <input type="file" name="profile" id="profile-image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" disabled type="text" placeholder="Select image to use as profile" required>
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        By clicking sign in you agree to terms and conditions.
                     </div>
                 </div>
 
-                <div class="inline field">
-                    <div class="ui checkbox">
-                        <input name="terms" type="checkbox" th:field="*{terms}">
-                        <label>I agree to the terms and conditions</label>
+                <div class="row">
+                    <div class="input-field col s12 m12 l12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
                     </div>
                 </div>
-                <div class="ui teal fluid large submit button">Register</div>
-            </div>
-            <div class="ui error message"></div>
+                <div class="row">
+                    <div class="col s12">
+                        <span class="left">
+                            <a th:href="@{/signin}">Sign</a>
+                        </span>
+                        <span class="right">
+                            <a th:href="@{/passwordReset}">Forgot Password?</a>
+                        </span>
+                    </div>
+                </div>
+            </form>
 
-        </form>
+        </div>
     </div>
 </div>
-
+<div th:replace="~{scripts::scripts}"></div>
 </body>
 </html>

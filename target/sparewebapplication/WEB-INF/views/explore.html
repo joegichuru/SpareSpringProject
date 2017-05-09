@@ -5,211 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Spare |explore</title>
-    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
-    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
-    <script th:src="@{/resources/semantic/app.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/explore.css}"/>
-    <!---developement only-->
-    <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
-    <link rel="stylesheet" href="../../resources/semantic/explore.css"/>
+
+    <link th:href="@{/resources/materialize/css/materialize.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link th:href="@{/resources/materialize/css/style.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link th:href="@{/resources/materialize/css/material-icons.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link th:href="@{/resources/materialize/noUiSlider/nouislider.css}" type="text/css" rel="stylesheet"/>
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
 </head>
 <body>
 <div th:replace="~{header::header}"></div>
-<div class="ui container">
-    <div class="ui grid main">
-        <div class="row">
-            <div class="ui inline cookie nag">
-            <span class="title">
-                We use cookies to ensure you get the best experience on our site.
-            </span>
-                <i class="close icon"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <button class="ui button circular icon right floated">
-                    <i class="icon options"></i>
-                </button>
-                <div id="filter">
-                    <form class="ui form">
-                        <div class="three fields hidden">
-                            <div class="field">
-                                <div class="ui search selection dropdown">
-                                    <input type="hidden" name="city">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">City</div>
-                                    <div class="menu">
-                                        <div class="item" data-value="nairobi">Nairobi</div>
-                                        <div class="item" data-value="mombasa">Mombasa</div>
-                                        <div class="item" data-value="kisumu">Kisumu</div>
-                                        <div class="item" data-value="nakuru">Nakuru</div>
-                                        <div class="item" data-value="eldoret">Eldoret</div>
-                                        <div class="item" data-value="thika">Thika</div>
-                                        <div class="item" data-value="ruiru">Ruiru</div>
-                                        <div class="item" data-value="machakos">Machakos</div>
-                                        <div class="item" data-value="naivasha">Naivasha</div>
-                                    </div>
-                                </div>
+<main>
+    <div class="container">
+        <!--<div class="row">-->
+        <ul class="collapsible" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">graphic_eq</i>Filter Results
+                </div>
+                <div class="collapsible-body">
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6">
+                                <select id="city">
+                                    <option value="" disabled selected>Sort by city</option>
+                                    <option value="nairobi">Nairobi</option>
+                                    <option value="mombasa">Mombasa</option>
+                                    <option value="kisumu">Kisumu</option>
+                                </select>
                             </div>
-                            <div class="field">
-                                <div class="ui selection dropdown">
-                                    <input type="hidden" name="price">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">Price</div>
-                                    <div class="menu">
-                                        <div class="item" data-value="price-high">High to low</div>
-                                        <div class="item" data-value="price-low">Low to high</div>
-                                    </div>
-                                </div>
+                            <div class="input-field col s12 m6 l6">
+                                <select id="category">
+                                    <option value="" disabled selected>Category</option>
+                                    <option value="sell">Sell</option>
+                                    <option value="rent">Rent</option>
+                                </select>
                             </div>
-                            <div class="field">
-                                <div class="ui selection dropdown">
-                                    <input type="hidden" name="views">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">Views</div>
-                                    <div class="menu">
-                                        <div class="item" data-value="most">High to low</div>
-                                        <div class="item" data-value="least">Low to high</div>
-                                    </div>
-                                </div>
+                            <div class="input-field col s12 m12 l12">
+                                <div id="price-slider"></div>
+                            </div>
+                            <div class="input-field col s12 l4 m8">
+                                <button type="submit" class="btn">
+                                    <i class="material-icons">filter</i> Filter
+                                </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
-
-
-            </div>
-        </div>
-
-        <!--<div class="row">-->
-            <!--<div class="ui items">-->
-                <!--<div class="item">-->
-                    <!--<div class="image">-->
-                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
-                    <!--</div>-->
-                    <!--<div class="content">-->
-                        <!--<a class="header">Header</a>-->
-                        <!--<div class="meta">-->
-                            <!--<span>Description</span>-->
-                        <!--</div>-->
-                        <!--<div class="description">-->
-                            <!--<p></p>-->
-                        <!--</div>-->
-                        <!--<div class="extra">-->
-                            <!--Additional Details-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                    <!--<div class="image">-->
-                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
-                    <!--</div>-->
-                    <!--<div class="content">-->
-                        <!--<a class="header">Header</a>-->
-                        <!--<div class="meta">-->
-                            <!--<span>Description</span>-->
-                        <!--</div>-->
-                        <!--<div class="description">-->
-                            <!--<p></p>-->
-                        <!--</div>-->
-                        <!--<div class="extra">-->
-                            <!--Additional Details-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                    <!--<div class="image">-->
-                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
-                    <!--</div>-->
-                    <!--<div class="content">-->
-                        <!--<a class="header">Header</a>-->
-                        <!--<div class="meta">-->
-                            <!--<span>Description</span>-->
-                        <!--</div>-->
-                        <!--<div class="description">-->
-                            <!--<p></p>-->
-                        <!--</div>-->
-                        <!--<div class="extra">-->
-                            <!--Additional Details-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                    <!--<div class="image">-->
-                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
-                    <!--</div>-->
-                    <!--<div class="content">-->
-                        <!--<a class="header">Header</a>-->
-                        <!--<div class="meta">-->
-                            <!--<span>Description</span>-->
-                        <!--</div>-->
-                        <!--<div class="description">-->
-                            <!--<p></p>-->
-                        <!--</div>-->
-                        <!--<div class="extra">-->
-                            <!--Additional Details-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                    <!--<div class="image">-->
-                        <!--<img th:src="@{/resources/images/bg-6.jpg}" />-->
-                    <!--</div>-->
-                    <!--<div class="content">-->
-                        <!--<a class="header">Header</a>-->
-                        <!--<div class="meta">-->
-                            <!--<span>Description</span>-->
-                        <!--</div>-->
-                        <!--<div class="description">-->
-                            <!--<p></p>-->
-                        <!--</div>-->
-                        <!--<div class="extra">-->
-                            <!--Additional Details-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
+            </li>
+        </ul>
         <!--</div>-->
-
-        <div class="ui three stackable teal link cards">
-            <div class="card raised" th:each="item:${items}">
-                <div class="ui image">
-                    <div class="ui teal ribbon label">
-                       <span th:text="${item.getCategory().toUpperCase()}"></span>
-                    </div>
-                    <a th:href="@{/explore/{itemId}(itemId=${item.getId()})}">
-                        <img th:src="${item.encodedImage()}"
-                             style="height: 240px;min-height: 200px;max-height: 260px;min-width: 100%;">
-                    </a>
-                </div>
-                <!--<img class="image" th:src="${item.encodedImage()}" />-->
-
-                <div class="content" style="min-height: 0;max-height: 100px;">
-                    <div class="header"><span th:text="${item.getName()}"></span>  </div>
-                    <div class="meta">
-                        <a><span th:text="${item.getAccount().getFname()+' '+ item.getAccount().getLname()}"></span> </a>
-                    </div>
-                    <div class="meta right floated">Location</div>
-                    <div class="description">
-                        <p th:text="${item.getDescription().substring(0,40)+'...'}" class="text small"></p>
-                    </div>
-                </div>
-                <div class="extra content">
-      <span class="right floated">
-        <i class="icon clock"></i> <span th:text="${item.timeConverter()}"></span>
-      </span>
-                    <span>
-        <i class="icon eye"></i>
-        75 views
-      </span>
-                </div>
-            </div>
-        </div>
-
-
+    </div>
+    <div class="row">
+       <div th:replace="~{explorefrag::explore}"></div>
+    </div>
+</main>
+<!-- Modal Structure -->
+<div id="cookie-modal" class="modal">
+    <div class="modal-content">
+        <h4>Cookie information</h4>
+        <p>We use cookies to improve your browsing experience.</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
 </div>
+<!--  Scripts-->
+<div th:include="~{scripts::scripts}"></div>
 </body>
 </html>

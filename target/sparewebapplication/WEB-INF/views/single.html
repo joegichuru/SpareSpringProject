@@ -1,158 +1,159 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head lang="en">
+<head th:replace="styles::styles(pageTitle='Spare::view')">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title th:text="${title}"></title>
-    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
-    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
-    <script th:src="@{/resources/semantic/app.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
-    <!--development only--->
-    <link rel="stylesheet" href="../../resources/semantic/dist/semantic.min.css"/>
-    <script type="text/javascript" th:src="@{/resources/semantic/maps.js}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"
-            async defer></script>
+    <!--<script type="text/javascript" th:src="@{/resources/semantic/maps.js}"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
+            <!--async defer></script>-->
+
     <style>
-        #map {
+        .map {
             height: 300px;
         }
     </style>
+    <script>
+//        $(document).ready(function(){
+//            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+//            $('.modal').modal();
+//            function clicked() {
+//                console.log("Clicked");
+//                $('#reviews').show();
+//            }
+//        });
+
+    </script>
 </head>
 <body>
+
 <div th:replace="~{header::header}"></div>
-<div class="ui container">
-    <div class="ui two column stackable grid main">
-        <div class="six wide column  computer tablet only">
-            <div class="ui segment" id="map">
-                <div class="ui active dimmer">
-                    <div class="ui text loader">Fetching map....</div>
+<main>
+    <div class="row">
+        <div class="col s12 l5 m12 hide-on-med-and-down map">
+                <!--<div class="card-panel teal">-->
+                    <!--<p class="white-text">Loading map data...please check your network connection-->
+                        <!--if you see this for more than 10 seconds</p>-->
+                <!--</div>-->
+                    <script>
+//                        var map;
+//                        function initMap(){
+//                            map = new google.maps.Map(document.getElementsByClassName('map'), {
+//                                center: {lat: -1.2921, lng: 36.8219},//load nairobi for now replace with addres
+//                                //of item from model
+//                                zoom: 15
+//                            });
+//                        }
+                    </script>
+                    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
+                            <!--async defer></script>-->
+
+            </div>
+        <div class="col s12 l7 m12">
+            <div class="card">
+                <div class="card-image">
+                    <img th:src="@{${item.encodedImage()}}"/>
+                    <span class="card-title">Price Tag</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light activator">
+                        <i class="material-icons">check</i>
+                    </a>
                 </div>
-                <script>
-                    var map;
-                    function initMap(){
-                        map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: -1.2921, lng: 36.8219},//load nairobi for now replace with addres
-                            //of item from model
-                            zoom: 15
-                        });
-                    }
-                </script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"
-                        async defer></script>
+                <div class="card-content">
+                    <span class="card-title" th:text="${item.getName()}"></span>
+                    <div class="row">
+                        <div class="card-panel teal white-text">
+                            <p th:text="${item.getDescription()}">Description</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-action">
+                    <div class="row valign-wrapper">
+                        <div class="col s6 l4 m4 left">
+                          <span>
+                               <button data-target="reviews" class="btn">Modal</button>
+                          </span>
+                        </div>
+                        <div class="col s6 l4 m4 right">
+                            <div class="row">
+                                <div class="col s8 l8 m8 offset-l2 offset-m2 offset-s2">
+                                    <img th:src="${item.getAccount().encodedImage()}" alt="" class="circle responsive-img">
+                                    <span class="black-text" th:text="${item.getAccount().getFname()+' '+item.getAccount().getLname()}">Name Name</span>
+                                </div>
+                                <div class="col s6 l8 m8 offset-l2 offset-m2 offset-s3 ">
+                                    <a class="btn white-text">
+                                        <i class="material-icons">message</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title">Available Amenities<i class="material-icons right">close</i></span>
+                    <div class="row">
+                        <p>Available amenities</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="ten wide column">
-            <div class="ui segment">
-                <div class="ui fluid raised card">
-                    <div class="image medium" style="max-height: 400px;">
-                        <img th:src="@{${item.encodedImage()}}"/>
-                    </div>
-                    <div class="content">
-                        <a class="header" th:text="${item.getName().toUpperCase()}">Modern residence</a>
-                        <div class="meta">
-                            <div class="left floated">
-                                <i class="icon clock"></i>
-                                <span class="date left floated" th:text="${item.timeConverter()}">5 mins ago</span>
-                                <span class="right floated">
-                                    <i class="icon location marker"></i>
-                                    <!--<span th:text="${item.getLocation().getCity()}"></span>-->
-                                    Near you </span>
-                            </div>
-                            <div class="right floated">
-                                <span><i class="icon eye"></i> 20 views</span>
-                                <span><i class="icon star"></i> 145 likes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui segment">
-                    <div  class="ui three column grid computer only">
-                        <div class="column">
-                            <div class="ui segment">
-                                <a class="ui label teal circular">
-                                    <span th:text="${item.getNoOfBedrooms()}">2</span>
-                                </a>
-                                Bedroom(s)
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui segment">
-                                <a class="ui label green circular">
-                                    <span th:text="${item.getNoOfBathrooms()}">2</span>
-                                </a>
-                                Bathroom(s)
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui segment">
-                                <a class="ui label olive circular">
-                                    <span>2</span>
-                                </a>
-                                Area in sqft
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui three column grid tablet mobile only">
-                        <div class="column">
-                            <div class="ui segment">
-                                <a class="ui label teal circular">
-                                    <span th:text="${item.getNoOfBedrooms()}">2</span>
-                                </a>
-                                Bedroom(s)
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui segment">
-                                <a class="ui label green circular">
-                                    <span th:text="${item.getNoOfBathrooms()}">2</span>
-                                </a>
-                                Bathroom(s)
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="ui segment">
-                                <a class="ui label olive circular">
-                                    <span>2</span>
-                                </a>
-                                Area in sqft
-                            </div>
-                        </div>
+        <div class="clearfix"></div>
+        <div class="col s12 l5 m12 hide-on-large-only map">
+            <!--<div class="card-panel teal">-->
+                <!--<p class="white-text">Loading map data...please check your network connection-->
+                    <!--if you see this for more than 10 seconds</p>-->
+            <!--</div>-->
+            <!--<script>-->
+                <!--var map;-->
+                <!--function initMap(){-->
+                    <!--map = new google.maps.Map(document.getElementsByClassName('map'), {-->
+                        <!--center: {lat: -1.2921, lng: 36.8219},//load nairobi for now replace with addres-->
+                        <!--//of item from model-->
+                        <!--zoom: 15-->
+                    <!--});-->
+                <!--}-->
+            <!--</script>-->
+            <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
+                    <!--async defer></script>-->
 
-                    </div>
-                </div>
-                <div class="ui fluid raised card">
-                    <div class="content">
-                        <div class="header">Description</div>
-                        <div class="description">
-                            <span th:text="${item.getDescription()}">
-                                Descrpiton about the item.
-                                Can be as long as 250 characters
-                            </span>
-
-                        </div>
-                        <div class="extra content">
-                            <div class="right floated author">
-                                <img class="ui avatar image" th:src="${item.getAccount().encodedImage()}">Author name
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui fluid raised card">
-                    <div class="content">
-                        <div class="header">Amenities</div>
-                        <div class="description">
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
-</div>
+    <div id="reviews" class="modal">
+        <div class="modal-content">
+            <h4>Item Reviews</h4>
+            <!--use ajax to send review-->
+            <form>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Review Message</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="ratings col 12 l8 m8">
+                                <select id="rating" name="rating" autocomplete="off">
+                                    <option value="Bad">Bad</option>
+                                    <option value="Mediocre">Mediocre</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Awesome">Awesome</option>
+                                </select>
+                            </div>
 
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+</main>
+
+<div th:replace="~{scripts::scripts}"></div>
 </body>
 </html>

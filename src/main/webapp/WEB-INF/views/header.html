@@ -2,125 +2,164 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <!--this is the default header template for all users-->
+<link th:href="@{/resources/materialize/css/materialize.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link th:href="@{/resources/materialize/css/style.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link th:href="@{/resources/materialize/css/material-icons.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link th:href="@{/resources/materialize/noUiSlider/nouislider.css}" type="text/css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+<link rel="stylesheet" href="../../resources/materialize/css/material-icons.css"/>
+<link rel="stylesheet" href="../../resources/materialize/css/style.min.css"/>
 <div th:fragment="header">
-    <div class="ui grid">
-        <div class="computer tablet only row">
-            <div class="ui inverted teal fixed menu navbar  grid">
-                <a href="#" class="brand item">SpareKE</a>
-                <div class="right compact menu">
-                    <a class="item" th:href="@{/}">
-                        <i class="icon dashcube"></i>
-                    </a>
-                    <a class="item" th:href="@{/explore}">
-                        <i class="icon world"></i>
-                    </a>
-                    <a class="item" th:href="@{/add}">
-                        <i class="icon add"></i>
-                    </a>
-                    <a class="item" th:href="@{/exlporemap}">
-                        <i class="icon location marker"></i>
-                    </a>
-                    <a class="item" th:href="@{/statistics}" th:if="${session.logged}">
-                        <i class="icon pie chart"></i>
-                    </a>
-                    <a href="#" class="item" th:if="${session.logged}">
-                            <i class="icon mail"></i>
-                            <div class="floating ui red tiny label circular">5</div>
+    <header class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper teal">
+                <a href="#!" class="brand-logo">SpareKE</a>
+                <a href="#" data-activates="mobile-nav" class="button-collapse">
+                    <i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">
+                        <i class="material-icons">apps</i>
+                    </a></li>
+                    <li><a th:href="@{/explore}">
+                        <i class="material-icons">explore</i>
+                    </a></li>
+                    <li>
+                        <a th:href="@{/add}">
+                            <i class="material-icons">add</i>
                         </a>
-                    <a href="#" class="item" th:if="${session.logged}">
-                            <i class="icon bell"></i>
-                            <div class="floating ui orange tiny label circular">10</div>
+                    </li>
+                    <li>
+                        <a th:href="@{/exploremap}">
+                            <i class="material-icons">location_on</i>
                         </a>
-                    <div class="ui inverted menu">
-                        <div class="item" th:if="${!(session.logged)}">
-                            <a class="ui small button teal" th:href="@{/signin}">Sign In</a>
-                        </div>
-                        <div class="item" th:if="${!(session.logged)}">
-                            <a class="ui small teal button" th:href="@{/signup}">Sign Up</a>
-                        </div>
-                    </div>
-                    <a class="ui item account" th:if="${session.logged}">
-                            <div class="ui dropdown">
-                                <img th:src="@{${session.account.encodedImage()}}" class="ui avatar image"/>
-                                <span th:text="${session.account.getFname()+' '+session.account.getLname()}"></span>
-                                <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <a th:href="@{/signout}" class="item">
-                                        <i class="icon lock"></i>Sign Out
-                                    </a>
-                                    <a th:href="@{/account}" class="item">
-                                        <i class="icon configure"></i>Edit Account
-                                    </a>
-                                </div>
-                            </div>
+                    </li>
+                    <li th:if="${session.logged}">
+                        <a th:href="@{/stats}">
+                            <i class="material-icons">pie_chart</i>
                         </a>
-                </div>
+                    </li>
+                    <li>
+                        <a th:href="@{/mail/(userid=${session.account.getId()})}" th:if="${session.logged}">
+                            <i class="material-icons">mail</i>
+                        </a>
+                    </li>
+                    <li  th:if="${session.logged}">
+                        <a href="#" data-target="notif" class="notification-btn">
+                            <i class="material-icons">notifications</i>
+                        </a>
+
+
+                    </li>
+                    <li >
+                        <a href="#" data-activates="slide-out" class="slide-out-collapse">
+                            <i class="material-icons medium">more_vert</i>
+                        </a>
+                    </li>
+                </ul>
 
             </div>
-
-        </div>
-        <div class="mobile only row">
-            <div class="ui fixed inverted teal navbar menu">
-                <a href="#" class="brand item">SpareKE</a>
-                <div class="right menu open">
-                    <a th:href="@{/messages}" class="item" th:if="${session.logged}">
-                        <i class="icon mail"></i>
-                        <div class="floating ui tiny red label circular">5</div>
-                    </a>
-                    <a th:href="@{/notification}" class="item" th:if="${session.logged}">
-                        <i class="icon bell"></i>
-                        <div class="floating ui tiny orange label circular">10</div>
-                    </a>
-                    <a class="ui item account" th:if="${session.logged}">
-                        <div class="ui dropdown">
-                            <img th:src="@{${session.account.encodedImage()}}" class="ui avatar image"/>
-                            <!--<span th:text="${session.account.getFname()+' '+session.account.getLname()}"></span>-->
-                            <i class="dropdown icon"></i>
-                            <div class="ui menu">
-                                <a th:href="@{/signout}" class="item">
-                                    <i class="icon lock"></i>Sign Out
-                                </a>
-                                <a th:href="@{/account}" class="item">
-                                    <i class="icon configure"></i>Edit Account
-                                </a>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="item" th:if="${!(session.logged)}">
-                        <a class="ui small button teal" th:href="@{/signin}">Sign In</a>
-                    </div>
-                    <div class="item" th:if="${!(session.logged)}">
-                        <a class="ui small teal button" th:href="@{/signup}">Sign Up</a>
-                    </div>
-                    <a href="#" class="item menu" id="sidebar-toggle">
-                        <i class="content icon"></i>
-                    </a>
+        </nav>
+    </header>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img th:src="@{/resources/images/back.jpg}">
                 </div>
+                <a href="#!user"th:if="${session.logged}"><img class="circle" th:src="${session.account.encodedImage()}"></a>
+                <a href="#!name" th:if="${session.logged}"><span class="white-text name">
+                    <span th:text="${session.account.getFname() +' '+session.account.getLname()}"></span>  </span></a>
+                <a href="#!email" th:if="${session.logged}"><span class="white-text email">
+                    <span th:text="${session.account.getEmail()}">developergitch@outlook.com</span></span></a>
+            </div></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Actions</a></li>
+        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/editaccount}"><i class="material-icons">edit</i>Edit</a></li>
+        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/signout}"><i class="material-icons">lock</i>Sign Out</a></li>
+        <li th:if="${!session.logged}">
+            <a class="waves-effect" th:href="@{/signin}"><i class="material-icons">lock</i>Sign in </a>
+        </li>
+        <li th:if="${!session.logged}">
+            <a class="waves-effect" th:href="@{/signup}"><i class="material-icons">person_add</i>Sign up</a>
+        </li>
+    </ul>
+    <ul class="side-nav" id="mobile-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img th:src="@{/resources/images/back.jpg}">
+                </div>
+                <a href="#!user"th:if="${session.logged}"><img class="circle" th:src="${session.account.encodedImage()}"></a>
+                <a href="#!name" th:if="${session.logged}"><span class="white-text name">
+                    <span th:text="${session.account.getFname() +' '+session.account.getLname()}"></span>  </span></a>
+                <a href="#!email" th:if="${session.logged}"><span class="white-text email">
+                    <span th:text="${session.account.getEmail()}">developergitch@outlook.com</span></span></a>
+            </div></li>
+        <li><a href="#">
+            <i class="material-icons">apps</i>Home
+        </a></li>
+        <li><a th:href="@{/explore}">
+            <i class="material-icons">explore</i>Explore
+        </a></li>
+        <li>
+            <a th:href="@{/add}">
+                <i class="material-icons">add</i>Add
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/exploremap}">
+                <i class="material-icons">location_on</i>Explore Map
+            </a>
+        </li>
+        <li th:if="${session.logged}">
+            <a th:href="@{/stats}">
+                <i class="material-icons">pie_chart</i>Account Stats
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/mail/(userid=${session.account.getId()})}" th:if="${session.logged}">
+                <i class="material-icons">mail</i>Messages
+            </a>
+        </li>
+        <li>
+            <a href="#" th:if="${session.logged}">
+                <i class="material-icons">notifications</i>Notifications
+            </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a class="subheader">Account Actions</a>
+        </li>
+        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/editaccount}"><i class="material-icons">edit</i>Edit</a></li>
+        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/signout}"><i class="material-icons">lock</i>Sign Out</a></li>
+        <li th:if="${!session.logged}">
+            <a class="waves-effect" th:href="@{/signin}"><i class="material-icons">lock</i>Sign in </a>
+        </li>
+        <li th:if="${!session.logged}">
+            <a class="waves-effect" th:href="@{/signup}"><i class="material-icons">person_add</i>Sign up</a>
+        </li>
 
-            </div>
+    </ul>
+    <!-- Notif Modal Structure -->
+    <div id="notif" class="modal modal-fixed-footer" th:if="${session.logged}">
+        <div class="modal-content">
+            <h4>Notifications</h4>
+            <ul class="collection">
+                <li class="avatar collection-item">
+                    <img th:src="${session.account.encodedImage()}" class="circle">
+                    <span class="email-title">User Name</span>
+                    <p class="truncate grey-text ultra-small">Hay Joe, we have n
+                        ext project for this summer.</p>
+                    <a href="app-email.html#!" class="secondary-content email-time">
+                        <i class="material-icons">time</i>
+                        <span class="grey-text ultra-small">12:10 am</span></a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="ui sidebar right thin vertical inverted grey menu">
-        <a class="item" th:href="@{/}">
-            <i class="dashcube icon teal"></i>
-            Dashboard
-        </a>
-        <a class="item" th:href="@{/explore}">
-            <i class="world icon teal"></i>
-            Explore
-        </a>
-        <a class="item" th:href="@{/add}">
-            <i class="plus icon teal"></i>
-            Add
-        </a>
-        <a class="item" th:href="@{/exploremap}">
-            <i class="location arrow icon teal"></i>
-            Explore Map
-        </a>
-        <a class="item" th:href="@{/statistics}" th:if="${session.logged}">
-            <i class="icon pie chart teal"></i>
-            Statistics
-        </a>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
     </div>
 </div>
 </body>

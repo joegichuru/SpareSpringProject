@@ -11,7 +11,7 @@
 
     });
     $(function () {
-        $('.ui.form')
+        $('#sign-up')
             .form({
                 fields: {
                     email: {

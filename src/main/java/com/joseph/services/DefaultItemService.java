@@ -58,24 +58,20 @@ public class DefaultItemService implements ItemService {
     }
 
     @Override
-    public List<Item> sortByPriceHigh() {
+    public List<Item> findByPrice(int high, int low) {
         return sessionFactory.getCurrentSession()
-                .createQuery("FROM Item i ORDER BY i.price DESC").getResultList();
+                .createQuery("FROM Item i WHERE i.price>:low AND i.price<:high")
+                .setParameter("high",high)
+                .setParameter("low",low).getResultList();
     }
 
     @Override
-    public List<Item> sortByPriceLowToHigh() {
+    public List<Item> findByCategory(String category) {
+        if(!category.equals("rent")||!category.equals("sell")){
+            category="rent";
+        }
         return sessionFactory.getCurrentSession()
-                .createQuery("FROM Item i ORDER BY i.price ASC ").getResultList();
-    }
-
-    @Override
-    public List<Item> sortByViewsLowToHigh() {
-        return null;
-    }
-
-    @Override
-    public List<Item> sortByViewsHighToLow() {
-        return null;
+                .createQuery("FROM Item i WHERE i.category like :cat").setParameter("cat",category)
+                .getResultList();
     }
 }
