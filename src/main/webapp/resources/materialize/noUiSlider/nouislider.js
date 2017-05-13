@@ -700,7 +700,7 @@ typeof b&&isFinite(b)?b:!1}function x(b){var f,c,d,e={};for(f=0;f<h.length;f+=1)
     function testTooltips ( parsed, entry ) {
 
         if ( entry === false ) {
-            return;
+
         }
 
         else if ( entry === true ) {

@@ -506,9 +506,8 @@ $.extend($.expr[ ":" ], {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -2113,9 +2112,8 @@ $.fn.form.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -2724,9 +2722,8 @@ $.extend( $.easing, {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -3556,9 +3553,8 @@ $.fn.checkbox.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -4265,9 +4261,8 @@ $.fn.dimmer.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -5155,7 +5150,7 @@ $.fn.dropdown = function(parameters) {
           if(hasSelected && !module.is.multiple()) {
             module.debug('Forcing partial selection to selected item', $selectedItem);
             module.event.item.click.call($selectedItem, {}, true);
-            return;
+
           }
           else {
             if(settings.allowAdditions) {
@@ -5824,7 +5819,7 @@ $.fn.dropdown = function(parameters) {
             if( module.can.activate( $(element) ) ) {
               module.set.selected(value, $(element));
               if(module.is.multiple() && !module.is.allFiltered()) {
-                return;
+
               }
               else {
                 module.hideAndClear();
@@ -5840,7 +5835,7 @@ $.fn.dropdown = function(parameters) {
             if( module.can.activate( $(element) ) ) {
               module.set.value(value, $(element));
               if(module.is.multiple() && !module.is.allFiltered()) {
-                return;
+
               }
               else {
                 module.hideAndClear();
@@ -8011,7 +8006,7 @@ $.fn.dropdown.settings.templates = {
           ? 'disabled '
           : ''
       ;
-      html += '<div class="'+ maybeDisabled +'item" data-value="' + option[fields.value] + '"' + maybeText + '>'
+      html += '<div class="'+ maybeDisabled +'item" data-value="' + option[fields.value] + '"' + maybeText + '>';
       html +=   option[fields.name];
       html += '</div>';
     });
@@ -8048,9 +8043,8 @@ $.fn.dropdown.settings.templates = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -8745,9 +8739,8 @@ $.fn.embed.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -9175,7 +9168,7 @@ $.fn.modal = function(parameters) {
           }
           else {
             module.debug('Dimmer is not visible cannot hide');
-            return;
+
           }
         },
 
@@ -9667,9 +9660,8 @@ $.fn.modal.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -9869,7 +9861,7 @@ $.fn.nag = function(parameters) {
             }
             else {
               module.error(error.noCookieStorage);
-              return;
+
             }
           },
           get: function(key, value) {
@@ -10175,9 +10167,8 @@ $.extend( $.easing, {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -11651,9 +11642,8 @@ $.fn.popup.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -12583,9 +12573,8 @@ $.fn.progress.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -13092,9 +13081,8 @@ $.fn.rating.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -14535,9 +14523,8 @@ $.fn.search.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -15457,9 +15444,8 @@ $.fn.shape.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -16494,9 +16480,8 @@ $.fn.sidebar.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -16638,7 +16623,7 @@ $.fn.sticky = function(parameters) {
           }
           if($context.length === 0) {
             module.error(error.invalidContext, settings.context, $module);
-            return;
+
           }
         },
 
@@ -16649,7 +16634,7 @@ $.fn.sticky = function(parameters) {
           if(module.cache.element.height > module.cache.context.height) {
             module.reset();
             module.error(error.elementSize, $module);
-            return;
+
           }
         },
 
@@ -17437,9 +17422,8 @@ $.fn.sticky.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -18390,9 +18374,8 @@ $.fn.tab.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -19486,9 +19469,8 @@ $.fn.transition.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 var
   window = (typeof window != 'undefined' && window.Math == Math)
@@ -20654,9 +20636,8 @@ $.api.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -21363,9 +21344,8 @@ $.fn.state.settings = {
  *
  */
 
-;(function ($, window, document, undefined) {
-
-"use strict";
+(function ($, window, document, undefined) {
+     "use strict";
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window

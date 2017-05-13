@@ -18,7 +18,7 @@
                 <a href="#" data-activates="mobile-nav" class="button-collapse">
                     <i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">
+                    <li><a th:href="@{/}">
                         <i class="material-icons">apps</i>
                     </a></li>
                     <li><a th:href="@{/explore}">
@@ -30,20 +30,20 @@
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/exploremap}">
+                        <a th:href="@{/explore/map}">
                             <i class="material-icons">location_on</i>
                         </a>
                     </li>
-                    <li th:if="${session.logged}">
-                        <a th:href="@{/stats}">
-                            <i class="material-icons">pie_chart</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a th:href="@{/mail/(userid=${session.account.getId()})}" th:if="${session.logged}">
-                            <i class="material-icons">mail</i>
-                        </a>
-                    </li>
+                    <!--<li th:if="${session.logged}">-->
+                        <!--<a th:href="@{/stats}">-->
+                            <!--<i class="material-icons">pie_chart</i>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a th:href="@{/mail/(userid=${session.account.getId()})}" th:if="${session.logged}">-->
+                            <!--<i class="material-icons">mail</i>-->
+                        <!--</a>-->
+                    <!--</li>-->
                     <li  th:if="${session.logged}">
                         <a href="#" data-target="notif" class="notification-btn">
                             <i class="material-icons">notifications</i>
@@ -83,6 +83,19 @@
         <li th:if="${!session.logged}">
             <a class="waves-effect" th:href="@{/signup}"><i class="material-icons">person_add</i>Sign up</a>
         </li>
+        <li><div class="divider"></div></li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="subheader">Administrative actions</a>
+        </li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="waves-effect" th:href="@{/adminhome}"><i class="material-icons">assessment</i>Dashboard</a>
+        </li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="waves-effect" th:href="@{/accountsaction}"><i class="material-icons">supervisor_account</i>Accounts Action</a>
+        </li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="waves-effect" th:href="@{/reports}"><i class="material-icons">trending_up</i>Reports</a>
+        </li>
     </ul>
     <ul class="side-nav" id="mobile-nav">
         <li>
@@ -112,18 +125,18 @@
                 <i class="material-icons">location_on</i>Explore Map
             </a>
         </li>
-        <li th:if="${session.logged}">
-            <a th:href="@{/stats}">
-                <i class="material-icons">pie_chart</i>Account Stats
-            </a>
-        </li>
+        <!--<li th:if="${session.logged}">-->
+            <!--<a th:href="@{/stats}">-->
+                <!--<i class="material-icons">pie_chart</i>Account Stats-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a th:href="@{/mail/(userid=${session.account.getId()})}" th:if="${session.logged}">-->
+                <!--<i class="material-icons">mail</i>Messages-->
+            <!--</a>-->
+        <!--</li>-->
         <li>
-            <a th:href="@{/mail/(userid=${session.account.getId()})}" th:if="${session.logged}">
-                <i class="material-icons">mail</i>Messages
-            </a>
-        </li>
-        <li>
-            <a href="#" th:if="${session.logged}">
+            <a href="#" th:if="${session.logged}" data-target="notif" class="notification-b">
                 <i class="material-icons">notifications</i>Notifications
             </a>
         </li>
@@ -138,6 +151,19 @@
         </li>
         <li th:if="${!session.logged}">
             <a class="waves-effect" th:href="@{/signup}"><i class="material-icons">person_add</i>Sign up</a>
+        </li>
+        <li><div class="divider"></div></li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="subheader">Administrative actions</a>
+        </li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="waves-effect" th:href="@{/adminhome}"><i class="material-icons">assessment</i>Dashboard</a>
+        </li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="waves-effect" th:href="@{/accountsaction}"><i class="material-icons">supervisor_account</i>Accounts Action</a>
+        </li>
+        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+            <a class="waves-effect" th:href="@{/reports}"><i class="material-icons">trending_up</i>Reports</a>
         </li>
 
     </ul>

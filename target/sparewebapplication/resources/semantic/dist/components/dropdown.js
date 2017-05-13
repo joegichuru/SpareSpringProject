@@ -898,7 +898,7 @@ $.fn.dropdown = function(parameters) {
           if(hasSelected && !module.is.multiple()) {
             module.debug('Forcing partial selection to selected item', $selectedItem);
             module.event.item.click.call($selectedItem, {}, true);
-            return;
+
           }
           else {
             if(settings.allowAdditions) {
@@ -1567,7 +1567,7 @@ $.fn.dropdown = function(parameters) {
             if( module.can.activate( $(element) ) ) {
               module.set.selected(value, $(element));
               if(module.is.multiple() && !module.is.allFiltered()) {
-                return;
+
               }
               else {
                 module.hideAndClear();
@@ -1583,7 +1583,7 @@ $.fn.dropdown = function(parameters) {
             if( module.can.activate( $(element) ) ) {
               module.set.value(value, $(element));
               if(module.is.multiple() && !module.is.allFiltered()) {
-                return;
+
               }
               else {
                 module.hideAndClear();
@@ -3754,7 +3754,7 @@ $.fn.dropdown.settings.templates = {
           ? 'disabled '
           : ''
       ;
-      html += '<div class="'+ maybeDisabled +'item" data-value="' + option[fields.value] + '"' + maybeText + '>'
+      html += '<div class="'+ maybeDisabled +'item" data-value="' + option[fields.value] + '"' + maybeText + '>';
       html +=   option[fields.name];
       html += '</div>';
     });

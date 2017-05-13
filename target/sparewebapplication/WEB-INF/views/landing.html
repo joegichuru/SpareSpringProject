@@ -1,164 +1,91 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="styles::styles(pageTitle='Spare::Welcome')">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="shortcut icon" th:href="@{/resources/images/favicon.png}" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Spare :: Home</title>
-    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
-    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
-    <script th:src="@{/resources/semantic/app.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
-    <style type="text/css">
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0;
-        }
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0;
-            font-size: 4em;
-            font-weight: normal;
-        }
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
 
-        .ui.vertical.stripe {
-            padding: 8em 0;
-        }
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-        .ui.vertical.stripe  {
-            margin: 3em 0;
-        }
-
-        .quote.stripe.segment {
-            padding: 0;
-        }
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-
-        .footer.segment {
-            padding: 5em 0;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .masthead.segment {
-                min-height: 350px;
-            }
-            .masthead h1.ui.header {
-                font-size: 1.8em;
-                margin-top: 1.5em;
-            }
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.4em;
-            }
-        }
-        </style>
 </head>
 <body>
-
-<div class="ui grid ">
-    <div class="row">
-        <div class="ui top fixed inverted menu">
-            <div class="ui container">
-               <a class="item brand">
-                   <i class="icon home"></i>
-                   SpareKE
-               </a>
-                <div class="right menu" th:if="${session.logged}">
-                    <div class="item">
-                        <a class="ui teal button" th:href="@{/signin}">Sign in</a>
-                    </div>
-                    <div class="item">
-                        <a class="ui teal button" th:href="@{/signup}">Sign Up</a>
-                    </div>
-                </div>
-            </div>
+<div class="navbar-fixed">
+    <nav class="teal lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#!" class="brand-logo">SpareKE</a>
         </div>
-    </div>
+    </nav>
 </div>
-<!-- Page Contents -->
-<div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
-
-        <div class="ui text container">
-            <h1 class="ui inverted header">
-                Welcome to SpareKE
-            </h1>
-            <h2>We are the destination to your next dream home!</h2>
-            <a th:href="@{/explore}" class="ui huge teal button">
-                Lets get started!<i class="icon right arrow"></i>
-            </a>
-        </div>
-
+<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+        <a class="btn waves-effect" th:href="@{/explore}">Explore</a>
     </div>
-    <div class="ui vertical stripe segment">
-        <div class="ui middle aligned stackable grid container">
-            <div class="row">
-                <div class="eight wide column">
-                    <h3 class="ui header">We spare you the hustle of getting your dream home.</h3>
-                    <p>We try to make it possible for you to search and connect with real estate providers around you so that
-                    you can concentrate your time and energy on more productive work.
-                    </p>
-                </div>
-                <div class="six wide right floated column">
-                    <img th:src="@{/resources/images/blog-2.jpg}" class="ui large bordered rounded image">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ui inverted vertical footer segment">
-        <div class="ui container">
-            <div class="ui stackable inverted divided equal height stackable grid">
-                <div class="four wide column">
-                    <h4 class="ui inverted header">About</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Contact Us</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">More</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">FAQ</a>
-                        <a href="#" class="item">Sitemap</a>
-                    </div>
-                </div>
-                <div class="six wide column">
-                    <h4 class="ui inverted header">Copyright info</h4>
-                    <p>&copy; 2017,SpareKE</p>
-                    <p>Designed and developed fully by Joseph Kabogo </p>
-                    <p>
-                        <a href="mailto:developergitch@outlook.com" class="item inverted"><i class="icon teal mail">
+    <div class="carousel-item cyan lighten-2 white-text" href="#!">
+        <h2 class="center"><i class="material-icons large circle">view_carousel</i></h2>
+        <h3 class="center">Easy to use</h3>
 
-                        </i>developergitch@outlook.com </a>
-                    </p>
-                    <p><i class="icon teal call"></i> 0724991427 </p>
-                    <p><a th:href="@{http://www.github.com/developergitch}" class="item">
-                        <i class="icon large github teal "></i>Github </a></p>
-                </div>
-            </div>
-        </div>
+        <h5 class="white-text">Sleek UI just for you</h5>
+    </div>
+    <div class="carousel-item cyan white-text" href="#three!">
+        <h2 class="center"><i class="material-icons large">group</i></h2>
+        <h3 class="center">Community Focused</h3>
+
+        <h5 class="white-text">Friendly ready to help agent</h5>
+    </div>
+    <div class="carousel-item cyan lighten-1 white-text" href="#four!">
+        <h2 class="center"><i class="material-icons large">query_builder</i></h2>
+        <h3 class="center">Spares your time</h3>
+
+        <h5 class="white-text">Stress no more!Start searching</h5>
     </div>
 </div>
 
+<div class="fixed-action-btn" >
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">perm_identity</i>
+    </a>
+    <ul>
+        <li th:if="${!session.logged}"><a class="btn-floating green" th:href="@{/signin}"><i class="material-icons">lock</i></a></li>
+        <li th:if="${session.logged}"><a class="btn-floating green lighten-2" th:href="@{/signout}"><i class="material-icons">lock_open</i></a></li>
+        <li th:if="${!session.logged}"><a class="btn-floating yellow darken-1" th:href="@{/signup}"><i class="material-icons">mode_edit</i></a></li>
+        <li><a class="btn-floating blue" th:href="@{/explore}"><i class="material-icons">explore</i></a></li>
+    </ul>
+</div>
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">SpareKE</h5>
+                <p class="grey-text text-lighten-4">We are a team of college
+                    students working on this project.Need your project done we got your back.</p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">About</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">About SpareKE</a></li>
+                    <li><a class="white-text" href="#!">FAQS</a></li>
+                    <li><a class="white-text" href="#!">TAC</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Facebook</a></li>
+                    <li><a class="white-text" href="#!">twitter</a></li>
+                    <li><a class="white-text" href="#!">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://www.josephgichuru.info">Kabogo Joseph</a>
+        </div>
+    </div>
+</footer>
+
+
+<div th:replace="~{scripts::scripts}"></div>
 </body>
 </html>

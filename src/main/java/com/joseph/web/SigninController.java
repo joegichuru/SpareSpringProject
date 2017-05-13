@@ -56,11 +56,7 @@ public class SigninController {
     public boolean authenticateUser(String email,String password){
         Account account=accountService.getAccount(email);
         if(account!=null){
-            if(Objects.equals(account.getEmail(), email) && Objects.equals(account.getPasswordHash(), password)){
-                return true;
-            }else {
-                return false;
-            }
+            return Objects.equals(account.getEmail(), email) && Objects.equals(account.getPasswordHash(), password);
         }else {
             return false;
         }

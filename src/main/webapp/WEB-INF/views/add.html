@@ -1,206 +1,201 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="styles::styles(pageTitle='Spare::Add')">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Spare :: Add Item</title>
-    <script th:src="@{/resources/semantic/jquery-3.2.0.min.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/dist/semantic.min.css}">
-    <script th:src="@{/resources/semantic/dist/semantic.min.js}"></script>
-    <script th:src="@{/resources/semantic/app.js}"></script>
-    <script th:src="@{/resources/semantic/uploadItem.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/semantic/app.css}"/>
-    <script th:src="@{/resources/semantic/filepreview.js}"></script>
-    <!--development only-->
-    <link rel="stylesheet" type="text/css" href="../../resources/semantic/dist/semantic.min.css"/>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"
-            async defer></script>
-    <style>
-        #image-preview {
-            width: 100px;
-            height: 100px;
-            position: relative;
-            background-color: #ffffff;
-            color: #2185d0;
-            border-radius: 45%;
-        }
-        #image-preview>input[type="file"]{
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
 
-        }
-        #map{
-            height: 300px;
-        }
-
-    </style>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $.uploadPreview({
-                input_field:"#image-upload",
-                preview_box:"#image-preview",
-                label_field:"#image_label",
-                label_default:"Choose File",
-                label_selected:"Change File",
-                no_label:false
-            });
-        });
-    </script>
 </head>
 <body>
+
 <div th:replace="~{header::header}"></div>
-<div class="ui container">
-    <div class="ui stackable two column grid main">
-        <div class="six wide column  computer tablet only">
-            <div class="map-holder">
-                <div id="map" class="ui segment">
-                    <div class="ui active dimmer">
-                        <div class="ui text loader">Loading Map...</div>
+<main>
+    <div class="row">
+        <div class="col s12 m4 l4 hide-on-med-and-down">
+            <div id="map" class="card-panel" style="min-height: 400px">
+                <div class="valign-wrapper center">
+                    Loading map...
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
                     </div>
                 </div>
 
-                <script>
-                    var map;
-                    var myMarker;
-                    var pos={lat:-1.2921,lng:36.8219};
-                    var markerIcon="https://codificar.com.br/wp-content/themes/codificar/images/icons/map-marker.png";
-                    function initMap() {
-                        map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: -1.2921, lng: 36.8219},//load nairobi by default
-                            zoom: 15
-                        });
-                        myMarker=new google.maps.Marker({
-                            position:pos,
-                            map:map,
-//                            label:{text:'Drag Me',color:'yellow'},
-                            icon:markerIcon,
-                            draggable:true
-                        });
-                        google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                            document.getElementById('address').value
-                                ="latitude:"+evt.latLng.lat().toFixed(3)+" "+"longitude:"+evt.latLng.lng().toFixed(3)});
-                    }
-                </script>
             </div>
+            <script>
+
+                var defaultMarkerLoc={lat:-1.2762565,lng:36.8614279};
+                var image="http://www.cascacolorado.com/wp-content/uploads/cache/2015/03/free-map-marker-icon-green-darker-e1426273978956/1904085263.png";
+                function initMap() {
+                    // Create a map object and specify the DOM element for display.
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: -1.2762565, lng: 36.8614279},
+                        scrollwheel: false,
+                        zoom: 15
+                    });
+                     var defaultMarker = new google.maps.Marker({
+                        position: defaultMarkerLoc,
+                        map: map,
+                         draggable:true,
+                         icon:image
+                    });
+                    google.maps.event.addListener(defaultMarker, 'dragend', function(evt){
+                        document.getElementById('address').value= 'lat:' + evt.latLng.lat().toFixed(4) +' '+ 'lng:' + evt.latLng.lng().toFixed(4);
+                    });
+                }
+
+
+            </script>
         </div>
-        <div class="ten wide column">
-            <div class="ui segment">
-                <form class="ui large form" th:object="${item}" method="post" th:action="@{/add}" enctype="multipart/form-data">
-                    <div class="fields">
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class=" teal map signs icon"></i>
-                                <input type="text" name="iname"
-                                       placeholder="Title" th:field="*{name}">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="icon teal dollar"></i>
-                                <input type="number" name="price"
-                                       placeholder="Price in Ksh." th:field="*{price}">
-                            </div>
-                        </div>
+        <div class="col s12 m10 l8 offset-m1">
+            <form >
+                <div class="row">
+                    <div class="input-field col l4 s12">
+                        <i class="material-icons prefix">label</i>
+                        <input type="text" id="item-title" required class="validate">
+                        <label for="item-title">Title for Item</label>
                     </div>
-                    <div class="field">
-                        <textarea class="ui fluid" placeholder="Description" th:field="*{description}" name="description"></textarea>
+                    <div class="input-field col l4 s12">
+                        <i class="material-icons prefix">attach_money</i>
+                        <input type="tel" id="price" required="required" class="validate">
+                        <label for="price">Price for Item(Ksh)</label>
                     </div>
-                    <div class="field">
-                      <div class="ui left icon input">
-                          <i class="icon location marker red"></i>
-                          <input type="text" disabled name="address" placeholder="Drag map marker to generate location" id="address"/>
-                      </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l8 s12">
+                        <i class="material-icons prefix">border_color</i>
+                        <textarea id="desc" class="materialize-textarea"></textarea>
+                        <label for="desc">Description(250 max)</label>
                     </div>
-                    <div class="fields">
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="icon teal bed"></i>
-                                <input type="number" placeholder="Number of Bedrooms" name="bedroom" th:field="*{noOfBedrooms}">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="icon teal bath"></i>
-                                <input type="number" placeholder="Number of bathrooms" name="bathroom" th:field="*{noOfBathrooms}">
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l4 s6 m6">
+                        <label>Bedroom Capacity</label>
+                        <p class="range-field">
+                            <input type="range" id="bedrooms" min="0" max="10"/>
+                        </p>
                     </div>
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="category" th:field="*{category}">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Category</div>
-                            <div class="menu">
-                                <div class="item" data-value="sell">For Sell</div>
-                                <div class="item" data-value="rent">For Rent</div>
-                            </div>
-                        </div>
+                    <div class="input-field col l4 s6 m6">
+                        <label>Bathroom Capacity</label>
+                        <p class="range-field">
+                            <input type="range" id="bathrooms" min="0" max="5"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l8 s12 m10">
+
+                        <i class="material-icons prefix">location_on</i>
+                        <input type="text" id="address" required="required" class="validate">
+                        <label for="address">Drag marker on Map</label>
 
                     </div>
-                    <div class="field">
-                        <div id="image-preview">
-                            <label for="image-upload" id="image-label" class="ui teal label circular large">
-                                <i class="icon upload"></i>Image
-                            </label>
-                            <input type="file" name="item-image" id="image-upload" style="display: none" required/>
+                </div>
+                <div class="row">
+                    <div class="input-field file-field col l8 s12 m10">
+                        <div class="btn">
+                            <span>Image</span>
+                            <input type="file" name="item-image" required />
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" disabled required/>
                         </div>
                     </div>
-
-                    <div class="field">
-                        <label class="ui label teal">Amenities</label>
-                    </div>
-                    <div class="ui relaxed horizontal list">
-                        <div class="item">
-                            <div class="ui teal checkbox">
-                                <input type="checkbox" name="garage" th:field="*{hasGarage}">
-                                <label>Garage</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="swimmingpool" th:field="*{hasSwimmingPool}">
-                                <label>Swimming pool</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="garden" th:field="*{hasGarden}">
-                                <label>Garden</label>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ui  checkbox">
-                                <input type="checkbox" name="security" th:field="*{hasSecurity}">
-                                <label>Security System</label>
-                            </div>
-                            <div class="ui  checkbox">
-                                <input type="checkbox" name="balcony" th:field="*{hasBalcony}">
-                                <label>Balcony</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="playground" th:field="*{hasPlayGround}">
-                                <label>Play Ground</label>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ui  checkbox">
-                                <input type="checkbox" name="fireplace" th:field="*{hasFirePlace}">
-                                <label>Fire Place</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="gated" th:field="*{hasGatedCommunity}">
-                                <label>Gated community</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="parking" th:field="*{hasParking}">
-                                <label>Parking Space</label>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="divider"></div>
+                    <h5 class="subheader center-align">Amenities</h5>
+                    <div class="col s6 l4 m6">
+                        <p>
+                            <input type="checkbox" id="garage">
+                            <label for="garage">Garage</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="swimmingpool">
+                            <label for="swimmingpool">Swimming pool</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="balcony">
+                            <label for="balcony">Balcony</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="parking">
+                            <label for="parking">Parking Area</label>
+                        </p>
 
                     </div>
-                 <button class="ui button fluid teal" type="submit">Add Property</button>
-                    <div class="ui error message"></div>
-                </form>
+                    <div class="col s6 l4 m6">
+                        <p>
+                            <input type="checkbox" id="security">
+                            <label for="security">Dedicated security</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="playground">
+                            <label for="playground">Play Ground</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="garden">
+                            <label for="garden">Garden</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="fire-place">
+                            <label for="fire-place">Fire Place</label>
+                        </p>
 
-            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m12 l12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Publish
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
 
+            </form>
         </div>
     </div>
-</div>
+</main>
+
+<div th:replace="~{scripts::scripts}"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap" async defer></script>
 </body>
 </html>

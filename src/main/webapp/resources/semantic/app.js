@@ -5,7 +5,7 @@
     });
     $(function () {
         $('.dropdown').dropdown();
-    })
+    });
     $(function () {
         $('.right.menu.open').on("click",function (e) {
             e.preventDefault();

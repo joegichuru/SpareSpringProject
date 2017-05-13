@@ -3,7 +3,10 @@
  */
 $(document).ready(function() {
     $('.modal').modal();
-    $('#rating').barrating({
-        theme:'bars-movie'
-    });
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    autoplay();
+    function autoplay() {
+        $('.carousel.carousel-slider').carousel('next');
+        setTimeout(autoplay,4500);
+    }
 });

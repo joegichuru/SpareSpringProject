@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="styles::styles(pageTitle='Spare::Map')">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+
+</head>
+<body>
+
+<div th:replace="~{header::header}"></div>
+<main>
+   <div class="row">
+
+   </div>
+</main>
+<div class="fixed-action-btn" >
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">perm_identity</i>
+    </a>
+    <ul>
+        <li th:if="${!session.logged}"><a class="btn-floating green" th:href="@{/signin}"><i class="material-icons">lock</i></a></li>
+        <li th:if="${session.logged}"><a class="btn-floating green lighten-2" th:href="@{/signout}"><i class="material-icons">lock_open</i></a></li>
+        <li th:if="${!session.logged}"><a class="btn-floating yellow darken-1" th:href="@{/signup}"><i class="material-icons">mode_edit</i></a></li>
+        <li><a class="btn-floating blue" th:href="@{/explore}"><i class="material-icons">explore</i></a></li>
+    </ul>
+</div>
+
+<div th:replace="~{scripts::scripts}"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap" async defer></script>
+</body>
+</html>

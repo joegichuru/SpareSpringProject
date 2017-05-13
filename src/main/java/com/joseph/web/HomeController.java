@@ -35,7 +35,7 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String handleHomePage(Model model){
-        if(session.getAttribute("account")!=null){
+        if(session.getAttribute("account")==null){
             session.setAttribute("logged",false);
         }else {
             session.setAttribute("logged",true);

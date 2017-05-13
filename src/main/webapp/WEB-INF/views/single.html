@@ -7,6 +7,7 @@
     <!--<script type="text/javascript" th:src="@{/resources/semantic/maps.js}"></script>-->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
             <!--async defer></script>-->
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
 
     <style>
         .map {
@@ -61,33 +62,17 @@
                 <div class="card-content">
                     <span class="card-title" th:text="${item.getName()}"></span>
                     <div class="row">
-                        <div class="card-panel teal white-text">
-                            <p th:text="${item.getDescription()}">Description</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card-action">
-                    <div class="row valign-wrapper">
-                        <div class="col s6 l4 m4 left">
-                          <span>
-                               <button data-target="reviews" class="btn">Modal</button>
-                          </span>
-                        </div>
-                        <div class="col s6 l4 m4 right">
-                            <div class="row">
-                                <div class="col s8 l8 m8 offset-l2 offset-m2 offset-s2">
+                      <div class="col">
+                          <p th:text="${item.getDescription()}">Description</p>
+                      </div>
+                        <div class="row">
+                            <div class="col s6 l3 m3 right">
+                                <div class="chip">
                                     <img th:src="${item.getAccount().encodedImage()}" alt="" class="circle responsive-img">
                                     <span class="black-text" th:text="${item.getAccount().getFname()+' '+item.getAccount().getLname()}">Name Name</span>
                                 </div>
-                                <div class="col s6 l8 m8 offset-l2 offset-m2 offset-s3 ">
-                                    <a class="btn white-text">
-                                        <i class="material-icons">message</i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="card-reveal">
@@ -99,6 +84,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
+
         <div class="col s12 l5 m12 hide-on-large-only map">
             <!--<div class="card-panel teal">-->
                 <!--<p class="white-text">Loading map data...please check your network connection-->
@@ -119,7 +105,7 @@
 
         </div>
     </div>
-    <div id="reviews" class="modal">
+    <div id="reviews" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h4>Item Reviews</h4>
             <!--use ajax to send review-->
@@ -135,12 +121,10 @@
                         </div>
                         <div class="row">
                             <div class="ratings col 12 l8 m8">
-                                <select id="rating" name="rating" autocomplete="off">
-                                    <option value="Bad">Bad</option>
-                                    <option value="Mediocre">Mediocre</option>
-                                    <option value="Good">Good</option>
-                                    <option value="Awesome">Awesome</option>
-                                </select>
+                                <p class="range-field">
+                                    <i class="material-icons">star</i>
+                                    <input type="range" id="test5" min="1" max="10" />
+                                </p>
                             </div>
 
                         </div>
@@ -151,6 +135,38 @@
         <div class="modal-footer">
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
+    </div>
+    <div id="message" class="modal">
+        <div class="modal-content">
+            <h5 class="center">Message Publisher</h5>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">label</i>
+                        <input type="text" required id="subject" maxlength="50"/>
+                        <label for="subject">Subject</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="message-body" class="materialize-textarea" maxlength="200"></textarea>
+                        <label for="message-body">Message Body</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating red" href="#reviews"><i class="material-icons">grade</i></a></li>
+            <li><a class="btn-floating yellow darken-1" href="#message"><i class="material-icons">chat</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">perm_identity</i></a></li>
+        </ul>
     </div>
 </main>
 

@@ -12,7 +12,7 @@ public interface MessageService {
     void addMessage(Messages message);
     void removeMessage(Messages message);
     List findAll();
-    public void readMessage(long messageId);
+    void readMessage(long messageId);
     Messages findMessage(long MessageId);
 
 }
