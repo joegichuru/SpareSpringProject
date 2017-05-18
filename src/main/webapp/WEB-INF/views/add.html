@@ -86,23 +86,33 @@
             </script>
         </div>
         <div class="col s12 m10 l8 offset-m1">
-            <form >
+            <form th:action="@{/add}" method="post" id="add" enctype="multipart/form-data" th:object="${item}" >
                 <div class="row">
                     <div class="input-field col l4 s12">
                         <i class="material-icons prefix">label</i>
-                        <input type="text" id="item-title" required class="validate">
+                        <input type="text" id="item-title" required class="validate" th:field="*{name}">
                         <label for="item-title">Title for Item</label>
                     </div>
                     <div class="input-field col l4 s12">
                         <i class="material-icons prefix">attach_money</i>
-                        <input type="tel" id="price" required="required" class="validate">
+                        <input type="tel" id="price" required="required" class="validate" th:field="*{price}">
                         <label for="price">Price for Item(Ksh)</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12  l8">
+                        <select id="category" th:field="*{category}">
+                            <option value="" disabled selected>Category</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="self-contain">Self Contain</option>
+                            <option value="bungalow">Bungalow</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col l8 s12">
                         <i class="material-icons prefix">border_color</i>
-                        <textarea id="desc" class="materialize-textarea"></textarea>
+                        <textarea id="desc" class="materialize-textarea" th:field="*{description}"></textarea>
                         <label for="desc">Description(250 max)</label>
                     </div>
                 </div>
@@ -110,30 +120,39 @@
                     <div class="input-field col l4 s6 m6">
                         <label>Bedroom Capacity</label>
                         <p class="range-field">
-                            <input type="range" id="bedrooms" min="0" max="10"/>
+                            <input type="range" id="bedrooms" min="0" max="10" th:field="*{noOfBedrooms}"/>
                         </p>
                     </div>
                     <div class="input-field col l4 s6 m6">
                         <label>Bathroom Capacity</label>
                         <p class="range-field">
-                            <input type="range" id="bathrooms" min="0" max="5"/>
+                            <input type="range" id="bathrooms" min="0" max="5" th:field="*{noOfBathrooms}"/>
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col l8 s12 m10">
+                    <div class="input-field col l4 s12 m6 hide-on-med-and-down">
 
                         <i class="material-icons prefix">location_on</i>
-                        <input type="text" id="address" required="required" class="validate">
+                        <input type="text" id="address" required="required" class="validate" disabled th:field="*{locationStr}">
                         <label for="address">Drag marker on Map</label>
 
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <select id="city" required th:field="*{city}">
+                            <option value="" disabled selected>City</option>
+                            <option value="nairobi">Nairobi</option>
+                            <option value="kisumu">Kisumu</option>
+                            <option value="mombasa">Mombasa</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field file-field col l8 s12 m10">
                         <div class="btn">
                             <span>Image</span>
-                            <input type="file" name="item-image" required />
+                            <input type="file" name="item-image" required/>
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" disabled required/>
@@ -145,34 +164,34 @@
                     <h5 class="subheader center-align">Amenities</h5>
                     <div class="col s6 l4 m6">
                         <p>
-                            <input type="checkbox" id="garage">
+                            <input type="checkbox" id="garage" th:field="*{hasGarage}">
                             <label for="garage">Garage</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="swimmingpool">
+                            <input type="checkbox" id="swimmingpool" th:field="*{hasSwimmingPool}">
                             <label for="swimmingpool">Swimming pool</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="balcony">
+                            <input type="checkbox" id="balcony" th:field="*{hasBalcony}">
                             <label for="balcony">Balcony</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="parking">
+                            <input type="checkbox" id="parking" th:field="*{hasParking}">
                             <label for="parking">Parking Area</label>
                         </p>
 
                     </div>
                     <div class="col s6 l4 m6">
                         <p>
-                            <input type="checkbox" id="security">
+                            <input type="checkbox" id="security" th:field="*{hasSecurity}">
                             <label for="security">Dedicated security</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="playground">
+                            <input type="checkbox" id="playground" th:field="*{hasPlayGround}">
                             <label for="playground">Play Ground</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="garden">
+                            <input type="checkbox" id="garden" th:checked="*{hasGarden}">
                             <label for="garden">Garden</label>
                         </p>
                         <p>

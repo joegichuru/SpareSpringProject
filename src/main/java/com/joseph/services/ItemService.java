@@ -19,4 +19,5 @@ public interface ItemService {
     List<Item> findByPrice(int high, int low);
 
     List<Item> findByCategory(String category);
+    List<Item> filteredResults(String city,String category,double priceHigh,double priceLow);
 }

@@ -10,11 +10,7 @@
     <link th:href="@{/resources/materialize/css/style.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link th:href="@{/resources/materialize/css/material-icons.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link th:href="@{/resources/materialize/noUiSlider/nouislider.css}" type="text/css" rel="stylesheet"/>
-    <script>
-        $(document).ready(function(){
-
-        });
-    </script>
+   <link href="../../resources/materialize/css/materialize.min.css" rel="stylesheet"/>
 </head>
 <body>
 <div th:replace="~{header::header}"></div>
@@ -40,15 +36,16 @@
                             <div class="input-field col s12 m6 l6">
                                 <select id="category">
                                     <option value="" disabled selected>Category</option>
-                                    <option value="sell">Sell</option>
-                                    <option value="rent">Rent</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="self-contain">Self Contain</option>
+                                    <option value="bungalow">Bungalow</option>
                                 </select>
                             </div>
                             <div class="input-field col s12 m12 l12">
                                 <div id="price-slider"></div>
                             </div>
                             <div class="input-field col s12 l4 m8">
-                                <button type="submit" class="btn">
+                                <button type="submit" class="btn" id="filter-btn">
                                     <i class="material-icons">filter</i> Filter
                                 </button>
                             </div>
@@ -65,13 +62,13 @@
     </div>
 </main>
 <!-- Modal Structure -->
-<div id="cookie-modal" class="modal">
-    <div class="modal-content">
+<div id="cookie-modal" class="modal bottom-sheet cyan">
+    <div class="modal-content white-text">
         <h4>Cookie information</h4>
         <p>We use cookies to improve your browsing experience.</p>
     </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <div class="modal-footer cyan darken-2">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat white-text">Dismiss</a>
     </div>
 </div>
 <!--  Scripts-->

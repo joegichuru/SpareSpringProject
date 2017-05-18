@@ -1,24 +1,19 @@
 package com.joseph.models;
 
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.stereotype.Component;
-import sun.util.calendar.BaseCalendar;
 
 import javax.imageio.ImageIO;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.Base64;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by joseph on 3/15/17.
@@ -38,19 +33,23 @@ public class Item extends BaseModel{
     private byte[] descriptiveImage;
     private int noOfBathrooms=1;
     private int noOfBedrooms=1;
-    private boolean hasSwimmingPool=false;
-    private boolean hasGarage=false;
-    private boolean hasSecurity=false;
-    private boolean hasBalcony=false;
-    private boolean hasPlayGround=false;
-    private boolean hasFirePlace=false;
-    private boolean hasGatedCommunity=false;
-    private boolean hasParking=false;
-    private boolean hasGarden=false;
-    private boolean availableImediately=true;
-    private String category="rent";//sell or rent
-    private String itemType="apartment";//apartments etc
+    private boolean hasSwimmingPool;
+    private boolean hasGarage;
+    private boolean hasSecurity;
+    private boolean hasBalcony;
+    private boolean hasPlayGround;
+    private boolean hasFirePlace;
+    private boolean hasGatedCommunity;
+    private boolean hasParking;
+    private boolean hasGarden;
+    private boolean availableImediately;
+    private String city="nairobi";
+    @ElementCollection
+    private List<String> amenities=new ArrayList<>();
+    private String category="apartment";//sell or rent
     private double price;
+    @Transient
+    private String locationStr;
     @OneToMany(mappedBy = "item")
     private Set<Ratings> ratings;
     @ManyToOne(cascade = CascadeType.ALL,optional = false)
@@ -183,7 +182,7 @@ public class Item extends BaseModel{
     }
 
     public void setLocation(Location location) {
-        this.location = location;
+        this.location = new Location(locationStr);
     }
 
     public boolean isHasSwimmingPool() {
@@ -210,14 +209,6 @@ public class Item extends BaseModel{
         this.category = category;
     }
 
-    public String getItemType() {
-        return itemType;
-    }
-
-    public void setItemType(String itemType) {
-        this.itemType = itemType;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -241,6 +232,7 @@ public class Item extends BaseModel{
     public String timeConverter(){
         Instant instant=Instant.now();
         Instant posted=getTimePosted().toInstant();
+        LocalDate localDate=getTimePosted().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         //get amount of seconds past since 1970-01-01T00:00:00Z.
         long millSinceEpoch=posted.getEpochSecond();
         //get time past till now
@@ -261,11 +253,11 @@ public class Item extends BaseModel{
                     if(hoursPast>0&&hoursPast<10){
                         return hoursPast +"hrs ago";
                     }else {
-                        return "on "+getTimePosted().toString();
+                        return "on "+(localDate.getYear()+"/"+localDate.getMonthValue()+"/"+localDate.getDayOfMonth());
                     }
                 }
             }else {
-                return "on "+getTimePosted().toString();
+                return "on "+(localDate.getYear());
             }
         }
     }
@@ -292,5 +284,21 @@ public class Item extends BaseModel{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getLocationStr() {
+        return locationStr;
+    }
+
+    public void setLocationStr(String locationStr) {
+        this.locationStr = locationStr;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

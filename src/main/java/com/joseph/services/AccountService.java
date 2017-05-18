@@ -14,4 +14,7 @@ public interface AccountService {
    Account getAccount(String email);
    List<Account> getUserAccounts();
    List<Account> getUserAccounts(String email);
+   void editAccount(Account account);
+
+   Account findAccount(long accountId);
 }

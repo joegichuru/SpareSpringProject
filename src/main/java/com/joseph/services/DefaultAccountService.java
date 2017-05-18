@@ -52,4 +52,17 @@ public class DefaultAccountService implements AccountService {
                 .createQuery("FROM Account a WHERE a.email=:email").setParameter("email",email)
                 .getResultList();
     }
+    @Transactional(readOnly = false)
+    @Override
+    public void editAccount(Account account) {
+        sessionFactory.getCurrentSession().saveOrUpdate(account);
+    }
+
+    @Override
+    public Account findAccount(long accountId) {
+        return (Account) sessionFactory.getCurrentSession()
+                .createQuery("FROM Account i WHERE i.id=:id")
+                .setParameter("id",accountId)
+                .getSingleResult();
+    }
 }

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="styles::styles(pageTitle='Spare::Register')">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>register</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/materialize/css/materialize.min.css}"/>
-    <link rel="stylesheet" type="text/css" th:href="@{/resources/materialize/css/material-icons.css}"/>
-    <!--<link rel="stylesheet" type="text/css" th:href="@{/resources/materialize/css/centre-page.css}"/>-->
-    <!--dev-->
-    <link rel="stylesheet" type="text/css" href="../../resources/materialize/css/materialize.min.css"/>
+    <!--<script type="text/javascript" th:src="@{/resources/semantic/maps.js}"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
+    <!--async defer></script>-->
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+</head>
+<body class="teal">
 <script>
     $(document).ready(function(){
         $('#sign-up').validate({
@@ -74,8 +74,6 @@
             }
         });    });
 </script>
-</head>
-<body class="teal">
 <div class="row">
     <div class="col s12 m8 l6 offset-l3 offset-m2">
         <div class="card-panel">

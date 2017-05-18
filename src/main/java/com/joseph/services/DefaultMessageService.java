@@ -23,7 +23,7 @@ public class DefaultMessageService implements MessageService {
     @Transactional(readOnly = false)
     @Override
     public void addMessage(Messages message) {
-        sessionFactory.getCurrentSession().saveOrUpdate(message);
+        sessionFactory.getCurrentSession().save(message);
     }
 
     @Transactional(readOnly = false)
@@ -56,5 +56,10 @@ public class DefaultMessageService implements MessageService {
                 .setParameter("messageId",messageId).uniqueResult();
 
     }
-
+    @Override
+    public List<Messages> findAllForAccount(String email) {
+        return sessionFactory.getCurrentSession()
+                .createQuery("from Messages m where m.recipientEmail=:email order by m.timeSend")
+                .setParameter("email",email).getResultList();
+    }
 }

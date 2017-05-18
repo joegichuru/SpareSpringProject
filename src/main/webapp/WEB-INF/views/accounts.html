@@ -10,7 +10,6 @@
 <body>
 <div th:replace="~{header::header}"></div>
 <main>
-    <div class="containerz">
         <table class="responsive-table striped highlight ">
             <thead>
             <tr>
@@ -30,6 +29,9 @@
                     Email
                 </td>
                 <td>
+                    Active Status
+                </td>
+                <td>
                     Last LogIn
                 </td>
                 <td>Actions</td>
@@ -39,50 +41,41 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="account:${accounts}">
+            <tr th:each="caccount:${accounts}">
                 <td>
-                    <span th:text="${account.getId()}">Id</span>
+                    <span th:text="${caccount.getId()}">Id</span>
                 </td>
                 <td>
-                    <span th:text="${account.getFname()}">First Name</span>
+                    <span th:text="${caccount.getFname()}">First Name</span>
                 </td>
                 <td>
-                    <span th:text="${account.getLname()}">Last Name</span>
+                    <span th:text="${caccount.getLname()}">Last Name</span>
                 </td>
                 <td>
-                    <span th:text="${account.getGender()}">sex</span>
+                    <span th:text="${caccount.getGender()}">sex</span>
                 </td>
                 <td>
-                    <span th:text="${account.getEmail()}">mail</span>
+                    <span th:text="${caccount.getEmail()}">mail</span>
                 </td>
                 <td>
-                    <span th:text="${account.getLastLogIn()}"></span>
+                    <span th:text="${caccount.isActive()? 'ACTIVE':'SUSPENDED'}">active</span>
                 </td>
                 <td>
-                    <a class='dropdown-button btn red lighten-2' href='#' data-activates='actions' data-beloworigin="true" >
-                        <span>Actions <i class="material-icons">arrow_drop_down</i></span>
-                       </a>
-                    <div class="dropdown-content" id="actions">
-                        <ul>
-                            <li>
-                                <a th:href="@{/accountsaction/delete/{id}(id=${account.id})}">
-                                    <i class="material-icons">delete_forever</i> DELETE</a>
-                            </li>
-                            <li>
-                                <a th:href="@{/accountsaction/suspend/{id}(id=${account.id})}">
-                                    <i class="material-icons">warning</i> SUSPEND
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <span th:text="${caccount.getLastLogIn()}"></span>
                 </td>
                 <td>
-                    <span th:text="${account.getUserType()}">TYPE</span>
+                    <a th:href="@{/accountsaction/delete/{id}(id=${caccount.id})}">
+                        <i class="material-icons">delete_forever</i> DELETE</a>
+                    <a th:href="@{/accountsaction/suspend/{id}(id=${caccount.id})}">
+                        <i class="material-icons">warning</i> SUSPEND
+                    </a>
+                </td>
+                <td>
+                    <span th:text="${caccount.getUserType()}">TYPE</span>
                 </td>
             </tr>
             </tbody>
         </table>
-    </div>
 
 </main>
 <div th:replace="~{scripts::scripts}"></div>

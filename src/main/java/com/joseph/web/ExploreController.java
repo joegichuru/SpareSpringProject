@@ -2,11 +2,13 @@ package com.joseph.web;
 
 import com.joseph.models.Item;
 import com.joseph.services.ItemService;
-import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -61,6 +63,14 @@ public class ExploreController {
     public String exploreFilterByCategory(@RequestParam(value = "category",required = false,defaultValue = "RENT")String category,
                                           Model model){
         itemList=itemService.findByCategory(category);
+        model.addAttribute("items",itemList);
+        return "explorefrag::explore";
+    }
+    @GetMapping(value = "sort")
+    public String filteredResults(@RequestParam("city") String city,
+                                  @RequestParam("category") String category,@RequestParam("priceHigh") double priceHigh,
+                                  @RequestParam("pricelow") double priceLow,Model model){
+        itemList=itemService.filteredResults(city,category,priceHigh,priceLow);
         model.addAttribute("items",itemList);
         return "explorefrag::explore";
     }

@@ -1,6 +1,9 @@
 package com.joseph.services;
 
 import com.joseph.models.Ratings;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -10,9 +13,16 @@ import java.util.List;
  */
 @DefaultService
 public class DefaultRatingsService implements RatingsService {
+    private SessionFactory sessionFactory;
+
+    @Autowired
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+    @Transactional(readOnly = false)
     @Override
     public void addRatings(Ratings ratings) {
-
+        sessionFactory.getCurrentSession().save(ratings);
     }
 
     @Override

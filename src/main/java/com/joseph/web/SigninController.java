@@ -3,6 +3,7 @@ package com.joseph.web;
 import com.joseph.beans.AuthData;
 import com.joseph.models.Account;
 import com.joseph.services.AccountService;
+import com.joseph.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +24,7 @@ import java.util.Objects;
 public class SigninController {
     private AccountService accountService;
     private HttpSession httpSession;
+    private MessageService messageService;
     @Autowired
     public void setAccountService(AccountService accountService){
         this.accountService=accountService;
@@ -30,6 +32,10 @@ public class SigninController {
     @Autowired
     public void setHttpSession(HttpSession httpSession) {
         this.httpSession = httpSession;
+    }
+    @Autowired
+    public void setMessageService(MessageService messageService) {
+        this.messageService = messageService;
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -44,7 +50,9 @@ public class SigninController {
             //call valdation method to validate user data against one stored in database
             status=authenticateUser(authData.getEmail(),authData.getPassword());
             if(status){
-                httpSession.setAttribute("account",accountService.getAccount(authData.getEmail()));
+                Account account=accountService.getAccount(authData.getEmail());
+                httpSession.setAttribute("account",account);
+                httpSession.setAttribute("messages",messageService.findAllForAccount(account.getEmail()));
                 return "redirect:/explore";
             }else {
                 return "redirect:/signin";

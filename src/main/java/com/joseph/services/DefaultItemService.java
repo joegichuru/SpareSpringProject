@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -73,5 +72,16 @@ public class DefaultItemService implements ItemService {
         return sessionFactory.getCurrentSession()
                 .createQuery("FROM Item i WHERE i.category like :cat").setParameter("cat",category)
                 .getResultList();
+    }
+
+    @Override
+    public List<Item> filteredResults(String city, String category, double priceHigh, double priceLow) {
+        return sessionFactory.getCurrentSession()
+                .createQuery("FROM Item i WHERE i.location.city=:city AND i.category=:category" +
+                        " AND i.price>=:priceLow AND i.price<=:priceHigh ORDER BY i.timePosted")
+                .setParameter("city",city)
+                .setParameter("category",category)
+                .setParameter("priceHigh",priceHigh)
+                .setParameter("priceLow",priceLow).getResultList();
     }
 }

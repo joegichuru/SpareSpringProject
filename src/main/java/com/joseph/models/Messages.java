@@ -1,8 +1,6 @@
 package com.joseph.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -18,6 +16,8 @@ public class Messages extends BaseModel {
     private String recipientEmail;
     private Boolean read_status =false;
     private String subject;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Account senderAccount;
 
     public String getMessageBody() {
         return messageBody;
@@ -66,5 +66,17 @@ public class Messages extends BaseModel {
 
     public void setRecipientEmail(String recipientEmail) {
         this.recipientEmail = recipientEmail;
+    }
+
+    public Boolean getRead_status() {
+        return read_status;
+    }
+
+    public Account getSenderAccount() {
+        return senderAccount;
+    }
+
+    public void setSenderAccount(Account senderAccount) {
+        this.senderAccount = senderAccount;
     }
 }

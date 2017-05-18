@@ -171,15 +171,19 @@
     <div id="notif" class="modal modal-fixed-footer" th:if="${session.logged}">
         <div class="modal-content">
             <h4>Notifications</h4>
-            <ul class="collection">
+            <p th:if="${session.messages.size()<0}">
+                You have no new notifications
+            </p>
+            <ul class="collection" th:if="${!session.messages.isEmpty()}" th:each="message:${session.messages}">
+
                 <li class="avatar collection-item">
-                    <img th:src="${session.account.encodedImage()}" class="circle">
-                    <span class="email-title">User Name</span>
-                    <p class="truncate grey-text ultra-small">Hay Joe, we have n
+                    <img th:src="${message.getSenderAccount().encodedImage()}" class="circle">
+                    <span class="email-title" th:text="${message.getSenderAccount().getLname()+' '+message.getSenderAccount().getFname()}"></span>
+                    <p class="truncate grey-text ultra-small" th:text="${message.getMessageBody()}">Hay Joe, we have n
                         ext project for this summer.</p>
                     <a href="app-email.html#!" class="secondary-content email-time">
                         <i class="material-icons">time</i>
-                        <span class="grey-text ultra-small">12:10 am</span></a>
+                        <span class="grey-text ultra-small" th:text="${message.getTimeSend()}">12:10 am</span></a>
                 </li>
             </ul>
         </div>

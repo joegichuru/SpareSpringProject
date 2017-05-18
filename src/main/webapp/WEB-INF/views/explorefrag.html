@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
 <body>
 <div class="col s12 m6 l4" th:each="item:${items}" th:fragment="explore">
     <div class="card sticky-action medium" >
@@ -21,12 +22,14 @@
                         <a ><i class="material-icons grey-text">star</i>(20)Reviews</a>
                     </span>
             <span class="right">
-                         <a ><i class="material-icons grey-text">visibility</i>(25)Views </a>
+                         <a ><i class="material-icons grey-text">schedule</i>
+                         <span th:text="${item.timeConverter()}"></span>
+                         </a>
                     </span>
         </div>
         <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">
-                        <span th:text="${item.getName()}"></span>
+                        Description
                         <i class="material-icons right">close</i></span>
             <p th:text="${item.getDescription()}">Here is some more
                 information about this product that is only revealed once clicked on.</p>

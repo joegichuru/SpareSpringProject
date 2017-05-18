@@ -8,23 +8,6 @@
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
             <!--async defer></script>-->
     <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
-
-    <style>
-        .map {
-            height: 300px;
-        }
-    </style>
-    <script>
-//        $(document).ready(function(){
-//            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-//            $('.modal').modal();
-//            function clicked() {
-//                console.log("Clicked");
-//                $('#reviews').show();
-//            }
-//        });
-
-    </script>
 </head>
 <body>
 
@@ -32,24 +15,8 @@
 <main>
     <div class="row">
         <div class="col s12 l5 m12 hide-on-med-and-down map">
-                <!--<div class="card-panel teal">-->
-                    <!--<p class="white-text">Loading map data...please check your network connection-->
-                        <!--if you see this for more than 10 seconds</p>-->
-                <!--</div>-->
-                    <script>
-//                        var map;
-//                        function initMap(){
-//                            map = new google.maps.Map(document.getElementsByClassName('map'), {
-//                                center: {lat: -1.2921, lng: 36.8219},//load nairobi for now replace with addres
-//                                //of item from model
-//                                zoom: 15
-//                            });
-//                        }
-                    </script>
-                    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
-                            <!--async defer></script>-->
 
-            </div>
+        </div>
         <div class="col s12 l7 m12">
             <div class="card">
                 <div class="card-image">
@@ -86,57 +53,47 @@
         <div class="clearfix"></div>
 
         <div class="col s12 l5 m12 hide-on-large-only map">
-            <!--<div class="card-panel teal">-->
-                <!--<p class="white-text">Loading map data...please check your network connection-->
-                    <!--if you see this for more than 10 seconds</p>-->
-            <!--</div>-->
-            <!--<script>-->
-                <!--var map;-->
-                <!--function initMap(){-->
-                    <!--map = new google.maps.Map(document.getElementsByClassName('map'), {-->
-                        <!--center: {lat: -1.2921, lng: 36.8219},//load nairobi for now replace with addres-->
-                        <!--//of item from model-->
-                        <!--zoom: 15-->
-                    <!--});-->
-                <!--}-->
-            <!--</script>-->
-            <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
-                    <!--async defer></script>-->
 
         </div>
     </div>
     <div id="reviews" class="modal modal-fixed-footer">
-        <div class="modal-content">
-            <h4>Item Reviews</h4>
-            <!--use ajax to send review-->
-            <form>
+        <form>
+            <div class="modal-content">
+                <h4>Item Reviews</h4>
+                <!--use ajax to send review-->
                 <div class="row">
                     <form class="col s12">
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Review Message</label>
+                                <textarea id="review-message" class="materialize-textarea"></textarea>
+                                <label for="review-message">Review Message</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="ratings col 12 l8 m8">
                                 <p class="range-field">
                                     <i class="material-icons">star</i>
-                                    <input type="range" id="test5" min="1" max="10" />
+                                    <input type="range" id="rating" min="1" max="10" />
                                 </p>
                             </div>
 
                         </div>
+                        <input hidden="hidden" th:value="${session.account.getEmail()}" id="userId"/>
+                        <input hidden="hidden" th:value="${item.getId()}" id="itemId"/>
                     </form>
                 </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-        </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action btn waves-effect waves-teal left" id="review">
+                    <i class="material-icons right">star</i>
+                    Review</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn">Close</a>
+            </div>
+        </form>
+
     </div>
-    <div id="message" class="modal">
+    <div id="message" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h5 class="center">Message Publisher</h5>
             <form class="col s12">
@@ -155,7 +112,16 @@
                         <label for="message-body">Message Body</label>
                     </div>
                 </div>
-            </form>
+                <input type="text" hidden="hidden" th:value="${item.getAccount().getEmail()}" id="recipientEmail"/>
+                <input type="text" hidden="hidden" th:value="${session.account.getEmail()}" id="senderEmail"/>
+             </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action btn waves-effect waves-teal left" id="send-message">
+                <i class="material-icons right">send</i>
+                Send
+            </a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn">Close</a>
         </div>
     </div>
     <div class="fixed-action-btn horizontal">

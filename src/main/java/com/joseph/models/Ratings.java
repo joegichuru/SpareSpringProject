@@ -1,9 +1,8 @@
 package com.joseph.models;
 
-import org.springframework.stereotype.Component;
-
-import javax.persistence.*;
-import java.io.Serializable;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 /**
  * Created by joseph on 4/3/17.
@@ -16,6 +15,7 @@ public class Ratings extends BaseModel{
     private int value;
     @ManyToOne(cascade = CascadeType.ALL)
     private Item item;
+    private String message;
 
     public Account getUser() {
         return user;
@@ -39,5 +39,13 @@ public class Ratings extends BaseModel{
 
     public void setItem(Item item) {
         this.item = item;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

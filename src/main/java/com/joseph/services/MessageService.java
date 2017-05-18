@@ -14,5 +14,6 @@ public interface MessageService {
     List findAll();
     void readMessage(long messageId);
     Messages findMessage(long MessageId);
+    List<Messages> findAllForAccount(String email);
 
 }

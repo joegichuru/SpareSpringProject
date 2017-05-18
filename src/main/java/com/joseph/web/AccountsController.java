@@ -5,8 +5,7 @@ import com.joseph.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -42,5 +41,13 @@ public class AccountsController {
             return "redirect:/signin";
         }
 
+    }
+    @ResponseBody
+    @GetMapping("/suspend/{accountId}")
+    public String suspendAccount(@PathVariable("accountId")long accountId){
+        Account account=accountService.findAccount(accountId);
+        account.setActive(false);
+        accountService.editAccount(account);
+        return "<p>Successfully suspended account<p>";
     }
 }
