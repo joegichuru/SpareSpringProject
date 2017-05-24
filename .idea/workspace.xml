@@ -1,41 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1eee4be-baec-4987-b2a6-69ff252a5306" name="Default" comment="Changed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/MessageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/RatingsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="e1eee4be-baec-4987-b2a6-69ff252a5306" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_15_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editaccount.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reports.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/suspended.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hibernate-conf.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/classes/hibernate-conf.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/spring/root-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/spring/servlet-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/add.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/emailerror.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/explore.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/landing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/navigation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/single.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/bg-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/bg-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/bg-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/bg-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/blog-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/blog-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/blog-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/blog-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/images/prof.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/accordion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/accordion.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/accordion.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/ad.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/ad.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/api.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/breadcrumb.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/breadcrumb.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/button.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/button.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/card.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/card.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/checkbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/checkbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/checkbox.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/checkbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/comment.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/comment.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/container.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/container.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dimmer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dimmer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dimmer.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dimmer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/divider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/divider.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dropdown.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dropdown.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/dropdown.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/embed.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/embed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/embed.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/embed.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/feed.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/feed.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/flag.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/flag.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/form.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/form.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/form.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/grid.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/header.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/header.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/icon.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/icon.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/image.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/image.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/input.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/input.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/item.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/item.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/label.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/label.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/list.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/list.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/loader.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/loader.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/menu.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/message.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/message.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/modal.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/modal.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/modal.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/nag.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/nag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/nag.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/nag.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/popup.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/popup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/popup.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/popup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/progress.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/progress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/progress.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/progress.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/rail.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/rail.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/rating.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/rating.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/rating.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/rating.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/reset.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/reset.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/reveal.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/reveal.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/search.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/search.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/search.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/segment.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/segment.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/shape.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/shape.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/shape.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/shape.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sidebar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sidebar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sidebar.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sidebar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/site.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/site.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/site.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/site.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/state.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/state.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/statistic.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/statistic.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/step.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/step.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sticky.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sticky.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sticky.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/sticky.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/tab.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/tab.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/tab.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/table.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/table.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/transition.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/transition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/transition.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/transition.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/visibility.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/components/visibility.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/semantic.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/semantic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/semantic.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/semantic.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/basic/assets/fonts/icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/basic/assets/fonts/icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/basic/assets/fonts/icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/basic/assets/fonts/icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/default/assets/fonts/icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/default/assets/fonts/icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/default/assets/fonts/icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/default/assets/fonts/icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/default/assets/fonts/icons.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/default/assets/images/flags.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/github/assets/fonts/octicons-local.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/github/assets/fonts/octicons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/github/assets/fonts/octicons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/github/assets/fonts/octicons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/material/assets/fonts/icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/material/assets/fonts/icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/material/assets/fonts/icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/dist/themes/material/assets/fonts/icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/filepreview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/jquery-3.2.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/login.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/semantic/register.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sparewebapplication/resources/test.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SpareSpringProject_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SpareSpringProject_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpareSpringProject.iml" afterPath="$PROJECT_DIR$/SpareSpringProject.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/models/Ratings.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/models/Ratings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/AccountService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultAccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultAccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultMessageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultMessageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultRatingsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultRatingsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/ItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/ItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/services/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/services/MessageService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/ErrorHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/ErrorHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/ExploreController.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/ExploreController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/AddItemController.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/AddItemController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/AdminController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/SigninController.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/SigninController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/joseph/web/SingleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/joseph/web/SingleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emailerror.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emailerror.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explore.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explore.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explorefrag.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explorefrag.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admindashboard.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admindashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/landing.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/landing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/single.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/single.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/init.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/add.html" afterPath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/emailerror.html" afterPath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/emailerror.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/explore.html" afterPath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/explore.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/header.html" afterPath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/register.html" afterPath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/single.html" afterPath="$PROJECT_DIR$/target/sparewebapplication/WEB-INF/views/single.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.min.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,6 +276,42 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="Messages" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Spare@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Spare" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="ACCOUNTS_Messages" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Spare@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Spare" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="ACCOUNTS" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -109,142 +324,123 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultRatingsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultRatingsService.java">
+      <file leaf-file-name="reports.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reports.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+            <state relative-caret-position="443">
+              <caret line="41" column="60" lean-forward="false" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultItemService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Messages.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="140" column="40" lean-forward="false" selection-start-line="140" selection-start-column="40" selection-end-line="140" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#534#535#0" expanded="false" />
-                <element signature="e#586#587#0" expanded="false" />
-                <element signature="e#882#883#0" expanded="false" />
-                <element signature="e#909#910#0" expanded="false" />
-                <element signature="e#961#962#0" expanded="false" />
-                <element signature="e#988#989#0" expanded="false" />
+                <element signature="e#2951#2952#0" expanded="true" />
+                <element signature="e#3047#3048#0" expanded="true" />
+                <element signature="e#3120#3121#0" expanded="true" />
+                <element signature="e#3175#3176#0" expanded="true" />
+                <element signature="e#3215#3216#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultMessageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultMessageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="59" column="24" lean-forward="false" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#534#535#0" expanded="false" />
-                <element signature="e#584#585#0" expanded="false" />
-                <element signature="e#683#684#0" expanded="false" />
-                <element signature="e#747#748#0" expanded="false" />
-              </folding>
+      <file leaf-file-name="Spare.ACCOUNTS_Messages" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ACCOUNTS_Messages">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/MessageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1020#1021#0" expanded="false" />
-                <element signature="e#1072#1073#0" expanded="false" />
-                <element signature="e#1154#1155#0" expanded="false" />
-                <element signature="e#1206#1207#0" expanded="false" />
-                <element signature="e#1271#1272#0" expanded="false" />
-                <element signature="e#1309#1310#0" expanded="false" />
-              </folding>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Spare.Messages" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.Messages">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultAccountService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultAccountService.java">
+      <file leaf-file-name="materialize.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#533#534#0" expanded="false" />
-                <element signature="e#583#584#0" expanded="false" />
-                <element signature="e#684#685#0" expanded="false" />
-                <element signature="e#748#749#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+            <state relative-caret-position="170">
+              <caret line="6612" column="20" lean-forward="false" selection-start-line="6612" selection-start-column="20" selection-end-line="6612" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spare.ACCOUNTS" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ACCOUNTS">
+      <file leaf-file-name="materialize.min.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="6404" column="24" lean-forward="false" selection-start-line="6404" selection-start-column="24" selection-end-line="6404" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="52" column="79" lean-forward="false" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spare.ITEMS" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ITEMS">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="explorefrag.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explorefrag.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accounts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/AccountService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -256,8 +452,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -288,30 +484,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navigation.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Location.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/prism.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/plugins.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/scrollbar.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/scrollbar.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/prism.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/centre-page.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/semantic/register.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/ratings.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/app.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/exploreController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/landing.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/exploremap.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/style.min.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/app.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/noUiSlider/nouislider.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/scripts.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/styles.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admindashboard.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emailerror.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/ErrorHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/ItemService.java" />
@@ -321,24 +506,35 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/RatingsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultRatingsService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/single.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/init.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explore.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/SigninController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultMessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/MessageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultAccountService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explorefrag.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admindashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate-conf.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/single.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editaccount.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultAccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/suspended.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/SigninController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/SingleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/AddItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/landing.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/web/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reports.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.min.css" />
       </list>
     </option>
   </component>
@@ -364,6 +560,38 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="SpareSpringProject" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="nz.ac.waikato.cms.weka:weka-stable:3.8.0" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependencyNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="SpareSpringProject" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -401,7 +629,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -463,36 +691,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpareSpringProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpareSpringProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -524,40 +722,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="materialize" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpareSpringProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpareSpringProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="materialize" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -610,6 +774,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialize" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialize.css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpareSpringProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpareSpringProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -761,11 +967,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -779,16 +985,16 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/materialize/css" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/materialize/js" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/materialize/js/mat" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/materialize/fonts" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/materialize/css/layouts" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/materialize/css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1138,13 +1344,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1351,7 +1550,19 @@
       <workItem from="1494956224121" duration="1090000" />
       <workItem from="1494959234634" duration="599000" />
       <workItem from="1495006456090" duration="15907000" />
-      <workItem from="1495088786002" duration="1881000" />
+      <workItem from="1495088786002" duration="2565000" />
+      <workItem from="1495105368930" duration="2983000" />
+      <workItem from="1495203556034" duration="2787000" />
+      <workItem from="1495211456625" duration="16000" />
+      <workItem from="1495264185851" duration="411000" />
+      <workItem from="1495264671851" duration="619000" />
+      <workItem from="1495278983632" duration="798000" />
+      <workItem from="1495279816287" duration="799000" />
+      <workItem from="1495397393469" duration="2433000" />
+      <workItem from="1495463969434" duration="2149000" />
+      <workItem from="1495471854752" duration="4492000" />
+      <workItem from="1495618523183" duration="3605000" />
+      <workItem from="1495643647388" duration="10312000" />
     </task>
     <task id="LOCAL-00001" summary="Lots of changes">
       <created>1493047410476</created>
@@ -1402,11 +1613,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494706160385</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changed">
+      <created>1495091408191</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495091408191</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241678000" />
+    <option name="totallyTimeSpent" value="273766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -1426,17 +1644,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67752445" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6764706" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5441176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33006537" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33006537" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23636363" sideWeight="0.5130719" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24772727" sideWeight="0.4869281" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29924244" sideWeight="0.4869281" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.47201946" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23257576" sideWeight="0.51086956" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1533,18 +1751,14 @@
     <MESSAGE value="more damn changes :=)" />
     <MESSAGE value="Changed" />
     <option name="LAST_COMMIT_MESSAGE" value="Changed" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/init.js</url>
-          <line>11</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/joseph/web/MessageController.java</url>
-          <line>42</line>
+          <line>43</line>
           <properties class="com.joseph.web.MessageController" method="defaultMessageHandler">
             <option name="EMULATED" value="true" />
           </properties>
@@ -1552,20 +1766,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java</url>
-          <line>46</line>
-          <properties class="com.joseph.web.AccountsController" method="suspendAccount">
+          <line>73</line>
+          <properties class="com.joseph.web.AccountsController" method="editPostProcessor">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1574,133 +1782,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/style.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/scripts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="106" lean-forward="false" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/landing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/SignupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admindashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/ErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emailerror.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/materialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="4676" column="2" lean-forward="false" selection-start-line="4676" selection-start-column="2" selection-end-line="4676" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/noUiSlider/nouislider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1915" column="17" lean-forward="false" selection-start-line="1915" selection-start-column="17" selection-end-line="1915" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="49" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -1708,18 +1789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1727,78 +1800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/SingleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.Ratings">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/RatingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="115" column="89" lean-forward="false" selection-start-line="115" selection-start-column="89" selection-end-line="115" selection-end-column="89" />
-          <folding>
-            <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#form#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="6518" column="28" lean-forward="true" selection-start-line="6518" selection-start-column="28" selection-end-line="6518" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="103" column="66" lean-forward="false" selection-start-line="103" selection-start-column="66" selection-end-line="103" selection-end-column="66" />
-          <folding>
-            <element signature="n#script#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1806,7 +1807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="47" column="81" lean-forward="false" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1821,73 +1821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/SigninController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="54" column="100" lean-forward="true" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
-          <folding>
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1267#1268#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/AddItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="180" column="94" lean-forward="false" selection-start-line="180" selection-start-column="94" selection-end-line="180" selection-end-column="94" />
-          <folding>
-            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ITEMS">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1255">
-          <caret line="133" column="18" lean-forward="false" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
-          <folding>
-            <element signature="e#2856#2857#0" expanded="false" />
-            <element signature="e#2952#2953#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2498">
-          <caret line="296" column="29" lean-forward="false" selection-start-line="296" selection-start-column="29" selection-end-line="296" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#timeConverter#0;class#Item#0" expanded="false" />
-            <element signature="e#7832#7833#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1895,59 +1828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#478#479#0" expanded="false" />
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#546#547#0" expanded="false" />
-            <element signature="e#578#579#0" expanded="false" />
-            <element signature="e#607#608#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-            <element signature="e#708#709#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
-            <element signature="e#834#835#0" expanded="false" />
-            <element signature="e#868#869#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#944#945#0" expanded="false" />
-            <element signature="e#982#983#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#561#562#0" expanded="false" />
-            <element signature="e#595#596#0" expanded="false" />
-            <element signature="e#649#650#0" expanded="false" />
-            <element signature="e#695#696#0" expanded="false" />
-            <element signature="e#728#729#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#805#806#0" expanded="false" />
-            <element signature="e#845#846#0" expanded="false" />
-            <element signature="e#877#878#0" expanded="false" />
-            <element signature="e#911#912#0" expanded="false" />
-            <element signature="e#966#967#0" expanded="false" />
-            <element signature="e#1012#1013#0" expanded="false" />
-            <element signature="e#1046#1047#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="false" />
-            <element signature="e#1122#1123#0" expanded="false" />
-            <element signature="e#1160#1161#0" expanded="false" />
-            <element signature="e#1198#1199#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1332#1333#0" expanded="false" />
-            <element signature="e#1373#1374#0" expanded="false" />
-            <element signature="e#1410#1411#0" expanded="false" />
-            <element signature="e#1470#1471#0" expanded="false" />
-            <element signature="e#1522#1523#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1955,15 +1835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#534#535#0" expanded="false" />
-            <element signature="e#586#587#0" expanded="false" />
-            <element signature="e#882#883#0" expanded="false" />
-            <element signature="e#909#910#0" expanded="false" />
-            <element signature="e#961#962#0" expanded="false" />
-            <element signature="e#988#989#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1971,42 +1842,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="59" column="24" lean-forward="false" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#534#535#0" expanded="false" />
-            <element signature="e#584#585#0" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1154#1155#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1309#1310#0" expanded="false" />
+            <element signature="e#1021#1022#0" expanded="false" />
+            <element signature="e#1073#1074#0" expanded="false" />
+            <element signature="e#1155#1156#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+            <element signature="e#1272#1273#0" expanded="false" />
+            <element signature="e#1310#1311#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.Messages">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2020,54 +1871,366 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explorefrag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/nz/ac/waikato/cms/weka/thirdparty/bounce/0.18/bounce-0.18.jar!/org/bounce/QButton.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/nz/ac/waikato/cms/weka/thirdparty/bounce/0.18/bounce-0.18.jar!/org/bounce/CardPanel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1133">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/nz/ac/waikato/cms/weka/weka-stable/3.8.0/weka-stable-3.8.0.jar!/weka/classifiers/bayes/BayesNet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.Ratings">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-conf.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="23" column="71" lean-forward="false" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/SignupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="60" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/BaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#387#388#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+            <element signature="e#449#450#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-653">
+          <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editaccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="67" lean-forward="false" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultAccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state relative-caret-position="901">
+          <caret line="64" column="32" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#533#534#0" expanded="false" />
             <element signature="e#583#584#0" expanded="false" />
             <element signature="e#684#685#0" expanded="false" />
             <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1864#1865#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/explorefrag.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        <state relative-caret-position="1751">
+          <caret line="103" column="66" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="219" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/RatingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        <state relative-caret-position="272">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/suspended.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/SingleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="46" column="56" lean-forward="false" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding>
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/SigninController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="60" column="33" lean-forward="false" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/AddItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="40" column="56" lean-forward="false" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="121" column="13" lean-forward="true" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/landing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="47" column="63" lean-forward="false" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ACCOUNTS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/AccountsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admindashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-530">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="55" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/web/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="70" column="37" lean-forward="false" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+          <folding>
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/services/DefaultItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="41" column="60" lean-forward="false" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ITEMS">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="52" column="79" lean-forward="false" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/joseph/models/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="140" column="40" lean-forward="false" selection-start-line="140" selection-start-column="40" selection-end-line="140" selection-end-column="40" />
+          <folding>
+            <element signature="e#2951#2952#0" expanded="true" />
+            <element signature="e#3047#3048#0" expanded="true" />
+            <element signature="e#3120#3121#0" expanded="true" />
+            <element signature="e#3175#3176#0" expanded="true" />
+            <element signature="e#3215#3216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.ACCOUNTS_Messages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/61370514/1f678b2f-4104-460d-849a-0ed48810af6f/Spare.Messages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="6612" column="20" lean-forward="false" selection-start-line="6612" selection-start-column="20" selection-end-line="6612" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/materialize/css/materialize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6404" column="24" lean-forward="false" selection-start-line="6404" selection-start-column="24" selection-end-line="6404" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

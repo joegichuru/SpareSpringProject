@@ -44,9 +44,9 @@
         <i class="large material-icons">perm_identity</i>
     </a>
     <ul>
-        <li th:if="${!session.logged}"><a class="btn-floating green" th:href="@{/signin}"><i class="material-icons">lock</i></a></li>
-        <li th:if="${session.logged}"><a class="btn-floating green lighten-2" th:href="@{/signout}"><i class="material-icons">lock_open</i></a></li>
-        <li th:if="${!session.logged}"><a class="btn-floating yellow darken-1" th:href="@{/signup}"><i class="material-icons">mode_edit</i></a></li>
+        <li th:if="${!session.logged||!session.account.isActive()}"><a class="btn-floating green" th:href="@{/signin}"><i class="material-icons">lock</i></a></li>
+        <li th:if="${session.logged&&session.account.isActive()}"><a class="btn-floating green lighten-2" th:href="@{/signout}"><i class="material-icons">lock_open</i></a></li>
+        <li th:if="${!session.logged||!session.account.isActive()}"><a class="btn-floating yellow darken-1" th:href="@{/signup}"><i class="material-icons">mode_edit</i></a></li>
         <li><a class="btn-floating blue" th:href="@{/explore}"><i class="material-icons">explore</i></a></li>
     </ul>
 </div>

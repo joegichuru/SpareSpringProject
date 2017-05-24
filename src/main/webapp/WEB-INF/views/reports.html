@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="styles::styles(pageTitle='Spare::Reports')">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+
+</head>
+<body>
+<div th:replace="~{header::header}"></div>
+<main>
+    <table class="responsive-table striped highlight ">
+        <thead>
+        <tr>
+            <td>
+                Item Id
+            </td>
+            <td>
+                Account Id
+            </td>
+            <td>
+                Date posted
+            </td>
+            <td>Action</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item:${items}">
+            <td>
+                <span th:text="${item.getId()}">Id</span>
+            </td>
+            <td>
+                <span th:text="${item.getAccount().getId()}">Account Id</span>
+            </td>
+            <td>
+                <span th:text="${item.getTimePosted()}">Date Posted</span>
+            </td>
+
+            <td>
+                <a th:href="@{/reports/delete/{id}(id=${item.getId()})}">
+                    <i class="material-icons">delete_forever</i> REMOVE
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</main>
+<div th:replace="~{scripts::scripts}"></div>
+</body>
+</html>

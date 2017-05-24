@@ -50,12 +50,10 @@ public class Item extends BaseModel{
     private double price;
     @Transient
     private String locationStr;
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "item",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Ratings> ratings;
-    @ManyToOne(cascade = CascadeType.ALL,optional = false)
+    @ManyToOne(cascade ={CascadeType.ALL},optional = false)
     private Account account;
-    @ManyToOne(cascade = CascadeType.ALL,optional = true)
-    private Location location;
 
     public String getName() {
         return name;
@@ -175,14 +173,6 @@ public class Item extends BaseModel{
 
     public void setRatings(Set<Ratings> ratings) {
         this.ratings = ratings;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = new Location(locationStr);
     }
 
     public boolean isHasSwimmingPool() {

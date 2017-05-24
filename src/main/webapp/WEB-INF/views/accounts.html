@@ -64,8 +64,8 @@
                     <span th:text="${caccount.getLastLogIn()}"></span>
                 </td>
                 <td>
-                    <a th:href="@{/accountsaction/delete/{id}(id=${caccount.id})}">
-                        <i class="material-icons">delete_forever</i> DELETE</a>
+                    <a th:href="@{/accountsaction/recover/{id}(id=${caccount.id})}">
+                        <i class="material-icons">check</i>RECOVER</a>
                     <a th:href="@{/accountsaction/suspend/{id}(id=${caccount.id})}">
                         <i class="material-icons">warning</i> SUSPEND
                     </a>

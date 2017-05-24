@@ -25,6 +25,7 @@ public class DefaultAccountService implements AccountService {
         sessionFactory.getCurrentSession().save(account);
     }
 
+    @Transactional(readOnly = false)
     @Override
     public void removeAccount(Account account) {
         sessionFactory.getCurrentSession().remove(account);

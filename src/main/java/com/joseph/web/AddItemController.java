@@ -16,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by joseph on 4/10/17.
@@ -33,8 +32,12 @@ public class AddItemController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String handleRequest(Model model){
-        if(session.getAttribute("account")==null){
+        Account account= (Account) session.getAttribute("account");
+        if(account==null){
             return "redirect:/signin";
+        }
+        if(!account.isActive()){
+            return "redirect:/accountsaction/suspended";
         }
         model.addAttribute("item",new Item());
         return "add";

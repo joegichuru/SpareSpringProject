@@ -1,5 +1,6 @@
 package com.joseph.web;
 
+import com.joseph.models.Account;
 import com.joseph.services.AccountService;
 import com.joseph.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpSession;
 public class SingleController {
     private AccountService accountService;
     private ItemService itemService;
+    HttpSession session;
 
     @Autowired
     public void setAccountService(AccountService accountService) {
@@ -29,11 +31,20 @@ public class SingleController {
     public void setItemService(ItemService itemService) {
         this.itemService = itemService;
     }
+    @Autowired
+    public void setSession(HttpSession session) {
+        this.session = session;
+    }
 
     @RequestMapping(path = "/explore/{itemId}")
     public String handler(Model model, HttpSession session, @PathVariable long itemId){
-        if(session.getAttribute("account")==null){
+        Account account= (Account) session.getAttribute("account");
+        if(account==null){
             return "redirect:/signin";
+        }
+
+        if(!account.isActive()){
+            return "redirect:/accountsaction/suspended";
         }
         model.addAttribute("title","Home");
         model.addAttribute("users",accountService.getUserAccounts());

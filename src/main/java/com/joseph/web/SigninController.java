@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -51,8 +52,16 @@ public class SigninController {
             status=authenticateUser(authData.getEmail(),authData.getPassword());
             if(status){
                 Account account=accountService.getAccount(authData.getEmail());
+                //set last logged in to now
+                account.setLastLogIn(new Date());
+                accountService.editAccount(account);
                 httpSession.setAttribute("account",account);
                 httpSession.setAttribute("messages",messageService.findAllForAccount(account.getEmail()));
+                if(!account.isActive()){
+                    return "redirect:/accountsaction/suspended";
+
+                }
+
                 return "redirect:/explore";
             }else {
                 return "redirect:/signin";

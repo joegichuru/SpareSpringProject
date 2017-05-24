@@ -44,7 +44,7 @@
                             <!--<i class="material-icons">mail</i>-->
                         <!--</a>-->
                     <!--</li>-->
-                    <li  th:if="${session.logged}">
+                    <li  th:if="${session.logged&&session.account.isActive()}">
                         <a href="#" data-target="notif" class="notification-btn">
                             <i class="material-icons">notifications</i>
                         </a>
@@ -67,33 +67,33 @@
                 <div class="background">
                     <img th:src="@{/resources/images/back.jpg}">
                 </div>
-                <a href="#!user"th:if="${session.logged}"><img class="circle" th:src="${session.account.encodedImage()}"></a>
-                <a href="#!name" th:if="${session.logged}"><span class="white-text name">
+                <a href="#!user"th:if="${session.logged&&session.account.isActive()}"><img class="circle" th:src="${session.account.encodedImage()}"></a>
+                <a href="#!name" th:if="${session.logged&&session.account.isActive()}"><span class="white-text name">
                     <span th:text="${session.account.getFname() +' '+session.account.getLname()}"></span>  </span></a>
-                <a href="#!email" th:if="${session.logged}"><span class="white-text email">
+                <a href="#!email" th:if="${session.logged&&session.account.isActive()}"><span class="white-text email">
                     <span th:text="${session.account.getEmail()}">developergitch@outlook.com</span></span></a>
             </div></li>
         <li><div class="divider"></div></li>
         <li><a class="subheader">Actions</a></li>
-        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/editaccount}"><i class="material-icons">edit</i>Edit</a></li>
-        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/signout}"><i class="material-icons">lock</i>Sign Out</a></li>
-        <li th:if="${!session.logged}">
+        <li th:if="${session.logged&&session.account.isActive()}"><a class="waves-effect" th:href="@{/accountsaction/edit/{id}(id=${session.account.getId()})}"><i class="material-icons">edit</i>Edit</a></li>
+        <li th:if="${session.logged && session.account.isActive()}"><a class="waves-effect" th:href="@{/signout}"><i class="material-icons">lock</i>Sign Out</a></li>
+        <li th:if="${!session.logged||!session.account.isActive()}">
             <a class="waves-effect" th:href="@{/signin}"><i class="material-icons">lock</i>Sign in </a>
         </li>
-        <li th:if="${!session.logged}">
+        <li th:if="${!session.logged||!session.account.isActive()}">
             <a class="waves-effect" th:href="@{/signup}"><i class="material-icons">person_add</i>Sign up</a>
         </li>
         <li><div class="divider"></div></li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="subheader">Administrative actions</a>
         </li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="waves-effect" th:href="@{/adminhome}"><i class="material-icons">assessment</i>Dashboard</a>
         </li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="waves-effect" th:href="@{/accountsaction}"><i class="material-icons">supervisor_account</i>Accounts Action</a>
         </li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account!=null&&session.account.isActive()&&session.account.getUserType().equals('ADMIN')}">
             <a class="waves-effect" th:href="@{/reports}"><i class="material-icons">trending_up</i>Reports</a>
         </li>
     </ul>
@@ -103,10 +103,10 @@
                 <div class="background">
                     <img th:src="@{/resources/images/back.jpg}">
                 </div>
-                <a href="#!user"th:if="${session.logged}"><img class="circle" th:src="${session.account.encodedImage()}"></a>
-                <a href="#!name" th:if="${session.logged}"><span class="white-text name">
+                <a href="#!user"th:if="${session.logged&&session.account.isActive()}"><img class="circle" th:src="${session.account.encodedImage()}"></a>
+                <a href="#!name" th:if="${session.logged&&session.account.isActive()}"><span class="white-text name">
                     <span th:text="${session.account.getFname() +' '+session.account.getLname()}"></span>  </span></a>
-                <a href="#!email" th:if="${session.logged}"><span class="white-text email">
+                <a href="#!email" th:if="${session.logged&&session.account.isActive()}"><span class="white-text email">
                     <span th:text="${session.account.getEmail()}">developergitch@outlook.com</span></span></a>
             </div></li>
         <li><a href="#">
@@ -136,7 +136,7 @@
             <!--</a>-->
         <!--</li>-->
         <li>
-            <a href="#" th:if="${session.logged}" data-target="notif" class="notification-b">
+            <a href="#" th:if="${session.logged&&session.account.isActive()}" data-target="notif" class="notification-b">
                 <i class="material-icons">notifications</i>Notifications
             </a>
         </li>
@@ -144,31 +144,31 @@
         <li>
             <a class="subheader">Account Actions</a>
         </li>
-        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/editaccount}"><i class="material-icons">edit</i>Edit</a></li>
-        <li th:if="${session.logged}"><a class="waves-effect" th:href="@{/signout}"><i class="material-icons">lock</i>Sign Out</a></li>
-        <li th:if="${!session.logged}">
+        <li th:if="${session.logged&&session.account.isActive()}"><a class="waves-effect" th:href="@{/accountsaction/edit/{id}(id=${session.account.getId()})}"><i class="material-icons">edit</i>Edit</a></li>
+        <li th:if="${session.logged&&session.account.isActive()}"><a class="waves-effect" th:href="@{/signout}"><i class="material-icons">lock</i>Sign Out</a></li>
+        <li th:if="${!session.logged||!session.account.isActive()}">
             <a class="waves-effect" th:href="@{/signin}"><i class="material-icons">lock</i>Sign in </a>
         </li>
-        <li th:if="${!session.logged}">
+        <li th:if="${!session.logged||!session.account.isActive()}">
             <a class="waves-effect" th:href="@{/signup}"><i class="material-icons">person_add</i>Sign up</a>
         </li>
         <li><div class="divider"></div></li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="subheader">Administrative actions</a>
         </li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="waves-effect" th:href="@{/adminhome}"><i class="material-icons">assessment</i>Dashboard</a>
         </li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="waves-effect" th:href="@{/accountsaction}"><i class="material-icons">supervisor_account</i>Accounts Action</a>
         </li>
-        <li th:if="${session.logged&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
+        <li th:if="${session.logged&&session.account.isActive()&&session.account!=null&&session.account.getUserType().equals('ADMIN')}">
             <a class="waves-effect" th:href="@{/reports}"><i class="material-icons">trending_up</i>Reports</a>
         </li>
 
     </ul>
     <!-- Notif Modal Structure -->
-    <div id="notif" class="modal modal-fixed-footer" th:if="${session.logged}">
+    <div id="notif" class="modal modal-fixed-footer" th:if="${session.logged&&session.account.isActive()}">
         <div class="modal-content">
             <h4>Notifications</h4>
             <p th:if="${session.messages.size()<0}">

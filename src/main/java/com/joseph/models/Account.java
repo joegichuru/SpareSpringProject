@@ -1,12 +1,10 @@
 package com.joseph.models;
 
-import org.springframework.util.Base64Utils;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Arrays;
 import java.util.Base64;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by joseph on 3/15/17.
@@ -42,6 +40,8 @@ public class Account extends BaseModel {
     @Column(name = "TYPE")
     private String userType="REGULAR";
     private String gender;
+    @OneToMany(orphanRemoval = true)
+    private Set<Messages> messages;
 
     public Date getCreatedOn() {
         return createdOn;
@@ -135,4 +135,11 @@ public class Account extends BaseModel {
         return "data:image/png;base64,"+Base64.getEncoder().encodeToString(getProfile());
     }
 
+    public Set<Messages> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Messages> messages) {
+        this.messages = messages;
+    }
 }
