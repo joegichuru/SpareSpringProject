@@ -1,16 +1,15 @@
 package com.joseph.web;
 
+import com.google.gson.Gson;
 import com.joseph.models.Item;
 import com.joseph.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -81,6 +80,16 @@ public class ExploreController {
         }else {
             session.setAttribute("logged",true);
         }
+
         return "exploremap";
+    }
+    @GetMapping(value = "mapdata",produces = "application/json")
+    @ResponseBody
+    public Object mapData(){
+        List<String> locations=new ArrayList<>();
+        for (Item i:itemService.findAll()){
+            locations.add(i.getLocationStr());
+        }
+        return new Gson().toJson(locations);
     }
 }

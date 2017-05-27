@@ -26,7 +26,6 @@ public class DefaultItemService implements ItemService {
     @Override
     public void addItem(Item item, Account account) {
         item.setAccount(account);
-        item.setAvailableImediately(true);
         item.setTimePosted(new Date());
         sessionFactory.getCurrentSession().save(item);
     }
@@ -53,7 +52,7 @@ public class DefaultItemService implements ItemService {
     @Override
     public List<Item> findByCity(String city) {
         return sessionFactory.getCurrentSession()
-                .createQuery("FROM Item i WHERE i.location.city=:city").setParameter("city",city).getResultList();
+                .createQuery("FROM Item i WHERE i.city=:city").setParameter("city",city).getResultList();
     }
 
     @Override
@@ -77,7 +76,7 @@ public class DefaultItemService implements ItemService {
     @Override
     public List<Item> filteredResults(String city, String category, double priceHigh, double priceLow) {
         return sessionFactory.getCurrentSession()
-                .createQuery("FROM Item i WHERE i.location.city=:city AND i.category=:category" +
+                .createQuery("FROM Item i WHERE i.city=:city AND i.category=:category" +
                         " AND i.price>=:priceLow AND i.price<=:priceHigh ORDER BY i.timePosted")
                 .setParameter("city",city)
                 .setParameter("category",category)

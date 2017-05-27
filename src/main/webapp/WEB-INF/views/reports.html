@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.css"/>
 
 </head>
 <body>
 <div th:replace="~{header::header}"></div>
 <main>
+    <div class="center">
+        <a href="" class="btn green" th:href="@{/reports/download}">
+            <i class="material-icons">file_download</i>
+            Generate Report</a>
+    </div>
+
     <table class="responsive-table striped highlight ">
         <thead>
         <tr>

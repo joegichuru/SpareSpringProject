@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.css"/>
 
 </head>
 <body>
@@ -78,7 +78,7 @@
                          icon:image
                     });
                     google.maps.event.addListener(defaultMarker, 'dragend', function(evt){
-                        document.getElementById('address').value= 'lat:' + evt.latLng.lat().toFixed(4) +' '+ 'lng:' + evt.latLng.lng().toFixed(4);
+                        document.getElementById('address').value= evt.latLng.lat().toFixed(4) +','+ evt.latLng.lng().toFixed(4);
                     });
                 }
 
@@ -90,7 +90,7 @@
                 <div class="row">
                     <div class="input-field col l4 s12">
                         <i class="material-icons prefix">label</i>
-                        <input type="text" id="item-title" required class="validate" th:field="*{name}">
+                        <input type="text" id="item-title" required class="validate" th:field="*{name}" maxlength="30">
                         <label for="item-title">Title for Item</label>
                     </div>
                     <div class="input-field col l4 s12">
@@ -112,7 +112,7 @@
                 <div class="row">
                     <div class="input-field col l8 s12">
                         <i class="material-icons prefix">border_color</i>
-                        <textarea id="desc" class="materialize-textarea" th:field="*{description}"></textarea>
+                        <textarea id="desc" class="materialize-textarea" th:field="*{description}" maxlength="250"></textarea>
                         <label for="desc">Description(250 max)</label>
                     </div>
                 </div>
@@ -134,8 +134,8 @@
                     <div class="input-field col l4 s12 m6 hide-on-med-and-down">
 
                         <i class="material-icons prefix">location_on</i>
-                        <input type="text" id="address" required="required" class="validate" disabled th:field="*{locationStr}">
-                        <label for="address">Drag marker on Map</label>
+                        <input type="text" id="address" required="required" class="validate"  th:field="*{locationStr}">
+                        <label for="address">Drag marker on Map(lat,lng)</label>
 
                     </div>
                     <div class="input-field col s12 m6 l6">
@@ -191,11 +191,11 @@
                             <label for="playground">Play Ground</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="garden" th:checked="*{hasGarden}">
+                            <input type="checkbox" id="garden" th:field="*{hasGarden}">
                             <label for="garden">Garden</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="fire-place">
+                            <input type="checkbox" id="fire-place" th:field="*{hasFirePlace}">
                             <label for="fire-place">Fire Place</label>
                         </p>
 

@@ -22,11 +22,12 @@ import java.util.Objects;
 @Controller
 @RequestMapping("/explore/message")
 public class MessageController {
+
     private Messages messages;
     private MessageService messageService;
     Account account;
-    AccountService accountService;
-    HttpSession session;
+    private AccountService accountService;
+    private HttpSession session;
     @Autowired
     public void setAccountService(AccountService accountService) {
         this.accountService = accountService;

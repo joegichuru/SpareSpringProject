@@ -1,6 +1,7 @@
 /**
- * Created by joseph on 5/8/17.
- */
+    * Created by joseph on 5/8/17.
+    *Email: developergitch@outlook.com
+    */
 $(document).ready(function() {
     $('.modal').modal();
     $('.carousel.carousel-slider').carousel({fullWidth: true});

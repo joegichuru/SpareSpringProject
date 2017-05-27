@@ -3,17 +3,14 @@ package com.joseph.models;
 
 import org.springframework.stereotype.Component;
 
-import javax.imageio.ImageIO;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.*;
+import java.util.Base64;
+import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by joseph on 3/15/17.
@@ -42,18 +39,23 @@ public class Item extends BaseModel{
     private boolean hasGatedCommunity;
     private boolean hasParking;
     private boolean hasGarden;
-    private boolean availableImediately;
     private String city="nairobi";
-    @ElementCollection
-    private List<String> amenities=new ArrayList<>();
     private String category="apartment";//sell or rent
     private double price;
-    @Transient
     private String locationStr;
     @OneToMany(mappedBy = "item",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Ratings> ratings;
     @ManyToOne(cascade ={CascadeType.ALL},optional = false)
     private Account account;
+    private boolean availableImediately=true;
+
+    public boolean isAvailableImediately() {
+        return availableImediately;
+    }
+
+    public void setAvailableImediately(boolean availableImediately) {
+        this.availableImediately = availableImediately;
+    }
 
     public String getName() {
         return name;
@@ -183,14 +185,6 @@ public class Item extends BaseModel{
         this.hasSwimmingPool = hasSwimmingPool;
     }
 
-    public boolean isAvailableImediately() {
-        return availableImediately;
-    }
-
-    public void setAvailableImediately(boolean availableImediately) {
-        this.availableImediately = availableImediately;
-    }
-
     public String getCategory() {
         return category;
     }
@@ -254,26 +248,6 @@ public class Item extends BaseModel{
     //encode the image to base64 so you can use the string to generate an image in html :-)
     public String encodedImage(){
         return "data:image/png;base64,"+ Base64.getEncoder().encodeToString(getDescriptiveImage());
-    }
-    //image croping algorithm
-    public void cropImage(byte[] original){
-        InputStream inputStream=new ByteArrayInputStream(original);
-        try {
-            BufferedImage originalImage= ImageIO.read(inputStream);
-            int height=originalImage.getHeight();
-            int width=originalImage.getWidth();
-            //scale all images to be 2880 *1620
-            if((height>1400&&height<1700)&&(width>2600&&width<3000)){
-                //do nothing perfect size
-            }else {
-                //crop or expand
-                //crop
-
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public String getLocationStr() {

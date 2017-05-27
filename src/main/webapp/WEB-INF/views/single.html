@@ -7,15 +7,93 @@
     <!--<script type="text/javascript" th:src="@{/resources/semantic/maps.js}"></script>-->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap"-->
             <!--async defer></script>-->
-    <link rel="stylesheet" href="../../resources/materialize/css/materialize.min.css"/>
+    <link rel="stylesheet" href="../../resources/materialize/css/materialize.css"/>
 </head>
 <body>
 
 <div th:replace="~{header::header}"></div>
 <main>
     <div class="row">
-        <div class="col s12 l5 m12 hide-on-med-and-down map">
+        <div class="col s12 m12 l5 hide-on-med-and-down">
+            <div id="map" class="card-panel" style="min-height: 600px">
+                <input type="hidden" th:value="${item.locationStr}" id="locationstr"/>
+                <div class="valign-wrapper center">
+                    Loading map...
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
 
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+
+                var locationstr=document.getElementById('locationstr').value;
+                console.log(locationstr);
+                var splt=locationstr.split(',');
+                var lat=Number(splt[0]);
+                var lng=Number(splt[1]);
+                console.log("lat:"+lat);
+                console.log("lng:"+lng);
+                var defaultMarkerLoc={lat:lat,lng:lng};
+                console.log("Marker:"+defaultMarkerLoc);
+                var image="http://www.cascacolorado.com/wp-content/uploads/cache/2015/03/free-map-marker-icon-green-darker-e1426273978956/1904085263.png";
+                function initMap() {
+                    // Create a map object and specify the DOM element for display.
+
+
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: lat, lng: lng},
+                        scrollwheel: false,
+                        zoom: 15
+                    });
+                    var defaultMarker = new google.maps.Marker({
+                        position: defaultMarkerLoc,
+                        map: map,
+                        icon:image
+                    });
+
+                }
+
+
+            </script>
         </div>
         <div class="col s12 l7 m12">
             <div class="card">
@@ -137,5 +215,6 @@
 </main>
 
 <div th:replace="~{scripts::scripts}"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkiJXKM3mDmSTHiai1NY934TbPaGAj9C0&callback=initMap" async defer></script>
 </body>
 </html>
