@@ -22,7 +22,6 @@ import java.util.Objects;
 @Controller
 @RequestMapping("/explore/message")
 public class MessageController {
-
     private Messages messages;
     private MessageService messageService;
     Account account;
